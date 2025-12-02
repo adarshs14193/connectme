@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
+
+.services-section {
+  width: 100%;
+  padding: 60px 0 100px;
+  font-family: "Oxygen", sans-serif;
+  text-align: center;
+}
+
+.services-title {
+  font-size: 42px;
+  color: #26AAE3;
+  margin-bottom: 40px;
+}
+
+/* GRID */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  padding: 0 130px;
+}
+
+/* CARD */
+.service-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+  overflow: hidden;
+  padding-bottom: 25px;
+  height: 546px;
+  width: 648px;
+  
+  
+}
+
+/* IMAGE */
+.service-image {
+  width: 100%;
+  height: 256px;
+  object-fit: cover;
+}
+
+/* TEXT */
+.service-text {
+  text-align: left;
+  padding: 20px;
+  font-size: 20px;
+  line-height: 1.3;
+  color: #000;
+}
+
+/* BUTTON */
+.service-btn {
+  margin-left: 20px;
+  background: #26AAE3;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+}
+
+.service-btn:hover {
+  background: black;
+  color: #26AAE3;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    width: 90%;
+    margin: 0 auto;
+  }
+}

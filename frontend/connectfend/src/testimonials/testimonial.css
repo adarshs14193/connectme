@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+
+.testimonial-section {
+  padding: 80px 0;
+  font-family: "Oxygen", sans-serif;
+  text-align: center;
+}
+
+.testimonial-title {
+  font-size: 48px;
+  color: #26AAE3;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+/* GRID LAYOUT */
+.testimonial-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* CARD */
+.testimonial-card {
+  width: 380px;
+  height: 480px;
+  background: #fff;
+  border-radius: 13px;
+  padding: 30px;
+  text-align: left;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+/* PROFILE SECTION */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.avatar {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+}
+
+.profile h3 {
+  font-size: 22px;
+  color: #000;
+  font-weight: bold;
+  margin: 0;
+}
+
+.profile p {
+  margin: 0;
+  font-size: 17px;
+  font-weight: lighter;
+  color: #444;
+}
+
+/* DIVIDER LINE */
+.divider {
+  margin: 18px 0;
+  border: none;
+  border-top: 2px solid #dcdcdc;
+}
+
+.bottom-divider {
+  margin-top: 40px;
+}
+
+/* TEXT CONTENT */
+.testimonial-text {
+  font-size: 28px;
+  line-height: 1.45;
+  color: #333;
+  margin-bottom: 35px;
+}
+
+/* BOTTOM PROFILE */
+.bottom-profile {
+  margin-top: 10px;
+}
+
+/* MARQUEE CONTAINER */
+.testimonial-marquee {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+/* TRACK THAT MOVES */
+.marquee-track {
+  display: flex;
+  gap: 40px;
+  animation: marqueeScroll 50s linear infinite;
+}
+
+/* Pause on hover */
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* ANIMATION */
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* CARD WIDTH FIXED FOR SMOOTH SCROLL */
+.testimonial-card {
+  min-width: 360px; /* very important for smooth auto-scroll */
+}

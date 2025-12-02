@@ -1,0 +1,128 @@
+.prod-dropdown {
+  position: absolute;
+  top: 80px; /* Adjusted spacing from nav */
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 1100px; /* Wider to accommodate 3 cols comfortably */
+  background: #fff;
+  border-radius: 8px; /* Slightly sharper corners */
+  
+  padding: 40px 50px;
+  padding-bottom: 20px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 Equal Columns */
+  column-gap: 40px;
+
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  border: 1px solid #eaeaea;
+  z-index: 2000;
+}
+
+/* VIEW MORE / CONTACT BUTTON */
+.prod-view-more {
+  position: absolute;
+  top: 570px;
+  right: 10px;
+
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  
+  text-decoration: none;
+
+  padding: 8px 24px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.prod-view-more:hover {
+  background-color: #ffffff;
+}
+
+/* COLUMN STYLES */
+.prod-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Invisible spacer to push the middle column down to align with categories */
+.prod-col-header-spacer {
+  height: 54px; /* Matches Main Title height + margin */
+  width: 100%;
+}
+
+.prod-main-title {
+  font-size: 32px;
+  font-weight: 400; /* Lighter weight like the screenshot */
+  color: #000;
+  margin: 0;
+  margin-bottom: 24px;
+  line-height: 1;
+}
+
+.prod-block {
+  margin-bottom: 10px;
+}
+
+.prod-cat {
+  font-size: 20px;
+  font-weight: 600; /* Bold Categories */
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.prod-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+/* LINK STYLES */
+.prod-link {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  group-transition: 0.2s;
+}
+
+.prod-link-label {
+  font-size: 15px;
+  color: #555; /* Dark gray text */
+  line-height: 1.4;
+  transition: color 0.2s;
+}
+
+/* Optional description text styling */
+.prod-link-desc {
+  font-size: 13px;
+  color: #888;
+  font-weight: 400;
+}
+.prod-link:hover .prod-link-label {
+  color: #26AAE3;
+}
+
+/* DIVIDER LINE */
+.prod-divider-line {
+  height: 1px;
+  background: #eee;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  width: 100%;
+}
+/* Hide the last divider in a column if needed */
+.prod-col .prod-block:last-child .prod-divider-line:last-child {
+  display: none;
+}
+.line1, 
+.line2 {
+  font-size: 20px;   /* Matches .prod-cat size */
+  font-weight: 600;  /* Matches .prod-cat weight */
+  color: #333;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

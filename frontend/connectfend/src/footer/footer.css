@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+
+.footer {
+  width: 100%;
+  background: #26AAE3;
+  padding: 60px 80px 0px;
+  font-family: "Oxygen";
+  color: #000;
+  box-sizing: border-box;
+}
+
+/* MAIN GRID */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 80px;
+}
+
+/* LEFT SECTION */
+.footer-left {
+  max-width: 360px;
+}
+
+.footer-logo img {
+  height: 65px;
+  width: auto;
+  margin-bottom: 15px;
+}
+
+.footer-title {
+  margin-top: 25px;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.footer-input {
+  margin: 18px 0;
+  display: flex;
+}
+
+.footer-input input {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  font-size: 21px;
+  background-color: #fff;
+  border-radius: 6px 0 0 6px;
+}
+
+.footer-input button {
+  padding: 12px 22px;
+  background: #000;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 22px;
+  border-radius: 0 6px 6px 0;
+}
+
+.footer-desc {
+  margin-top: 12px;
+  font-size: 23px;
+  line-height: 1.25;
+  color: #fff;
+}
+
+.footer-icons {
+  margin-top: 25px;
+}
+
+.footer-icons a {
+  display: inline-block;
+  margin-right: 18px;
+  color: #000;
+  font-size: 32px;
+}
+
+.footer-privacy {
+  display: inline-block;
+  margin-bottom: 25px;
+  font-size: 16px;
+  text-decoration: underline;
+    color: #fff;
+}
+
+/* MIDDLE */
+.footer-middle h2,
+.footer-right h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.footer-middle ul {
+  padding: 0;
+  list-style: none;
+}
+
+.footer-middle li {
+  margin-bottom: 14px;
+}
+
+.footer-middle a {
+  color: #fff;
+  text-decoration: underline;
+  font-size: 19px;
+}
+
+.footer-middle a:hover {
+    color: #000;
+  
+}   
+
+/* RIGHT SECTION */
+.footer-right a {
+  display: block;
+  margin-bottom: 12px;
+  color: #fff;
+  text-decoration: underline;
+  font-size: 19px;
+}
+
+.footer-right a:hover {
+    color: #000;
+  
+}
+
+.footer-location {
+  max-width: 280px;
+  font-size: 17px;
+  line-height: 1.25;
+  margin-top: 10px;
+  color: #fff;
+}
+
+/* Wrapper keeps hr + text centered and same width */
+.footer-bottom-container {
+  width: fit-content;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Line matches width of the copyright text */
+.footer-line {
+  width: 100%;
+  max-width: 1000px;   /* Adjust if needed */
+  border: none;
+  border-top: 1px solid white;
+  margin: 14px auto 10px;
+}
+
+/* Copyright text */
+.footer-bottom {
+  color: #fff;
+  font-size: 23px;
+  font-weight: 400;
+  text-align: center;
+    margin: 0;
+}

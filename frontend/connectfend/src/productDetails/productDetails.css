@@ -1,0 +1,149 @@
+.product-details-page {
+  width: 90%;
+  margin: auto;
+  padding-top: 20px;
+  font-family: "Oxygen", sans-serif;
+}
+
+/* ===============================
+      TITLE
+================================*/
+.pd-title {
+  font-size: 50px;
+  font-weight: 700;
+  color: #e6782d;
+  margin-bottom: 40px;
+}
+
+.pd-title span {
+  color: black;
+}
+
+/* ===============================
+        TOP SECTION
+================================*/
+.pd-top {
+  display: flex;
+  gap: 120px;
+  margin-bottom: 60px;
+}
+
+.pd-image {
+  width: 400px;
+  height: auto;
+}
+
+.pd-desc {
+  font-size: 18px;
+  line-height: 1.55;
+  color: #333;
+  max-width: 650px;
+}
+
+.pd-download {
+  display: inline-block;
+  margin-top: 20px;
+  background: #e6782d;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 17px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.pd-download:hover {
+  background: #c45819;
+  color: white;
+}
+
+/* ===============================
+        FEATURES
+================================*/
+.pd-features h2 {
+  font-size: 32px;
+  color: #26AAE3;
+  margin-bottom: 15px;
+}
+
+.pd-features ul {
+  padding-left: 25px;
+  color: black;
+  line-height: normal;
+}
+
+.pd-features li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+/* ===============================
+        ADVANTAGES
+================================*/
+.pd-advantages {
+  margin-top: 40px;
+  color: black;
+  line-height: normal;
+}
+
+.pd-advantages h2 {
+  font-size: 32px;
+  color: #26AAE3;
+  margin-bottom: 15px;
+}
+
+.pd-advantages ul {
+  padding-left: 25px;
+}
+
+.pd-advantages li {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+/* ===============================
+    COMMUNICATION INTERFACE
+================================*/
+.pd-communication {
+  margin-top: 60px;
+}
+
+.pd-communication h2 {
+    display: flex;
+    justify-self: center;
+  font-size: 36px;
+  color: #e6782d;
+  margin-bottom: 20px;
+}
+
+.pd-icons-row {
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+  align-items: center;
+}
+
+.pd-icon-block {
+  text-align: center;
+}
+
+.pd-icon-block img {
+  width: 250px;
+  height: auto;
+}
+
+.pd-icon-block p {
+  font-size: 16px;
+  margin-top: 5px;
+  color: #333;
+}
+
+/* ===============================
+    NOT FOUND
+================================*/
+.not-found {
+  margin-top: 150px;
+  text-align: center;
+  font-size: 40px;
+  color: red;
+}
