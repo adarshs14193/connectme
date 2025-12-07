@@ -1,5 +1,5 @@
 import React from "react";
-import "./LandingPage.css";
+import "./landingPage.css";
 import bgVideo from "../assets/hero-video.mp4"; // change path
 import Products from "../products1/products1";
 import Testimonials from "../testimonials/testimonial";
