@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../productsPage/productsPage.css";
+import "./productsPage.css";
 import products from "../data/product";
 import { Link } from "react-router-dom"; 
 import FilterMenu from "../filters/FilterMenu";

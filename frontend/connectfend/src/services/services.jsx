@@ -1,5 +1,5 @@
 import React from "react";
-import "./Services.css";
+import "./services.css";
 import servicesData from "../data/servicesData";
 import { Link } from "react-router-dom";
 
