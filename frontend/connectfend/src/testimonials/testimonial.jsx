@@ -3,7 +3,8 @@ import "./Testimonial.css";
 import testimonials from "../data/testimonials";
 
 export default function Testimonial() {
-  // duplicate list for perfect infinite scroll
+
+  // This is required only for marquee scroll smoothness
   const repeated = [...testimonials, ...testimonials];
 
   return (
@@ -14,12 +15,12 @@ export default function Testimonial() {
         <div className="marquee-track">
 
           {repeated.map((t, index) => {
-            const isOdd = index % 2 === 0; // odd visually
+            const isOdd = index % 2 === 0;
 
             return (
               <div key={index} className="testimonial-card">
 
-                {/* ODD CARD → TOP PROFILE ONLY */}
+                {/* ODD CARD → TOP PROFILE */}
                 {isOdd && (
                   <>
                     <div className="profile">
@@ -38,14 +39,13 @@ export default function Testimonial() {
                   </>
                 )}
 
-                {/* REVIEW TEXT */}
+                {/* TEXT */}
                 <p className="testimonial-text">{t.text}</p>
 
-                {/* EVEN CARD → BOTTOM PROFILE ONLY */}
+                {/* EVEN CARD → BOTTOM PROFILE */}
                 {!isOdd && (
                   <>
                     <hr className="divider bottom-divider" />
-
                     <div className="profile bottom-profile">
                       <div
                         className="avatar"

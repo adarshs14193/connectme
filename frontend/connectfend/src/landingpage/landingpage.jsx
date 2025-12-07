@@ -18,13 +18,7 @@ export default function LandingPage() {
       </video>
 
       {/* Overlay Content */}
-      <div className="landing-content">
-        <h1>
-          Connecting Business Needs with <br />
-          reliable, sustainable and <br />
-          innovative Technology
-        </h1>
-      </div>
+     
         
     </div>
     <Products />

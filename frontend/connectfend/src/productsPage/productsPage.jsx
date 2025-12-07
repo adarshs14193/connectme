@@ -2,32 +2,52 @@ import React, { useState } from "react";
 import "../productsPage/productsPage.css";
 import products from "../data/product";
 import { Link } from "react-router-dom"; 
+import FilterMenu from "../filters/FilterMenu";
 
 export default function ProductsPage() {
   const ITEMS_PER_PAGE = 20;
 
   const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = Math.ceil(products.length / ITEMS_PER_PAGE);
+  const [showFilter, setShowFilter] = useState(false);
+  const [filters, setFilters] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState(products);
 
+  // 🔥 Auto-generate categories from actual data (fixes mismatch!)
+  const categories = [...new Set(products.map((p) => p.subtitle))];
+
+  const applyFilter = () => {
+    if (filters.length === 0) {
+      setFilteredProducts(products);
+    } else {
+      const fp = products.filter((p) => filters.includes(p.subtitle));
+      setFilteredProducts(fp);
+    }
+
+    setShowFilter(false);
+    setCurrentPage(1);
+  };
+
+  const totalPages = Math.ceil(filteredProducts.length / ITEMS_PER_PAGE);
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-  const currentItems = products.slice( startIndex, startIndex + ITEMS_PER_PAGE );
-
-  const handleNext = () => {
-    if (currentPage < totalPages) setCurrentPage(currentPage + 1);
-  };
-
-  const handlePrev = () => {
-    if (currentPage > 1) setCurrentPage(currentPage - 1);
-  };
+  const currentItems = filteredProducts.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
   return (
     <div className="products-section">
 
       {/* FILTER BUTTON */}
       <div className="filter-container">
-        <button className="filter-btn">
-          Filter <span className="filter-icon"></span>
+        <button className="filter-btn" onClick={() => setShowFilter(!showFilter)}>
+          Filter
         </button>
+
+        {showFilter && (
+          <FilterMenu 
+            filters={filters}
+            setFilters={setFilters}
+            onApply={applyFilter}
+            categories={categories}   // ✅ FIX
+          />
+        )}
       </div>
 
       {/* PRODUCT GRID */}
@@ -50,10 +70,10 @@ export default function ProductsPage() {
         ))}
       </div>
 
-      {/* LOAD MORE BUTTON */}
+      {/* LOAD MORE */}
       {currentPage < totalPages && (
         <div className="load-more-container">
-          <button className="load-more-btn" onClick={handleNext}>
+          <button className="load-more-btn" onClick={() => setCurrentPage(currentPage + 1)}>
             Load More
           </button>
         </div>
@@ -63,7 +83,7 @@ export default function ProductsPage() {
       <div className="pagination">
         <span
           className={`arrow ${currentPage === 1 ? "disabled" : ""}`}
-          onClick={handlePrev}
+          onClick={() => currentPage > 1 && setCurrentPage(currentPage - 1)}
         >
           &#60;
         </span>
@@ -80,7 +100,7 @@ export default function ProductsPage() {
 
         <span
           className={`arrow ${currentPage === totalPages ? "disabled" : ""}`}
-          onClick={handleNext}
+          onClick={() => currentPage < totalPages && setCurrentPage(currentPage + 1)}
         >
           &#62;
         </span>
