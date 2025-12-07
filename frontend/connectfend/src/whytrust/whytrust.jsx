@@ -1,5 +1,5 @@
 import React from "react";
-import "./whyTrust.css";
+import "./whytrust.css";
 import trustImg from "../assets/iot.png"; // your image path
 
 export default function whyTrust() {
