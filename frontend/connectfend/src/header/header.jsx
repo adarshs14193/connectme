@@ -62,7 +62,7 @@ export default function Header() {
 
           <li><Link to="/work">Work</Link></li>
           <li><Link to="/blog">Blog</Link></li>
-          <li><Link to="/about">About (Verified)</Link></li>
+          <li><Link to="/about">About</Link></li>
         </ul>
       </nav>
 
