@@ -62,7 +62,7 @@ export default function Header() {
 
           <li><Link to="/work">Work</Link></li>
           <li><Link to="/blog">Blog</Link></li>
-          <li><Link to="/about">About</Link></li>
+          <li><Link to="/about">About (Verified)</Link></li>
         </ul>
       </nav>
 
@@ -72,7 +72,7 @@ export default function Header() {
       {/* SERVICES DROPDOWN PANEL */}
       {openDropdown === "services" && (
         <div className="mega-dropdown" onClick={(e) => e.stopPropagation()}>
-          
+
           <div className="mega-col">
             <h3 className="mega-title">Solutions</h3>
 
