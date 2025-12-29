@@ -1,44 +1,52 @@
 .prod-dropdown {
   position: absolute;
-  top: 80px; /* Adjusted spacing from nav */
+  top: 80px;
+  /* Adjusted spacing from nav */
   left: 50%;
   transform: translateX(-50%);
 
-  width: 1100px; /* Wider to accommodate 3 cols comfortably */
+  width: 1200px;
+  /* Wider to accommodate 4 cols comfortably */
   background: #fff;
-  border-radius: 8px; /* Slightly sharper corners */
-  
+  border-radius: 8px;
+  /* Slightly sharper corners */
+
   padding: 40px 50px;
-  padding-bottom: 20px;
+  padding-bottom: 60px;
+  /* Increased padding to prevent overlap */
 
+  /* No longer hardcoded grid-template-columns */
+}
+
+.prod-grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr; /* 3 Equal Columns */
-  column-gap: 40px;
-
-  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-  border: 1px solid #eaeaea;
-  z-index: 2000;
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 Equal Columns for Meters, Valves, Gateways, Software */
+  column-gap: 30px;
 }
 
 /* VIEW MORE / CONTACT BUTTON */
 .prod-view-more {
   position: absolute;
-  top: 570px;
-  right: 10px;
+  bottom: 25px;
+  /* Moved down slightly */
+  right: 50px;
+  /* Aligned with right padding */
 
-  font-size: 15px;
-  font-weight: 500;
-  color: #fff;
-  
+  font-size: 14px;
+  font-weight: 600;
+  color: #26AAE3;
+  /* Changed to blue to stand out against white background */
+
   text-decoration: none;
 
-  padding: 8px 24px;
+  padding: 8px 16px;
   border-radius: 4px;
   transition: background 0.2s;
 }
 
 .prod-view-more:hover {
-  background-color: #ffffff;
+  background-color: #f0f9ff;
 }
 
 /* COLUMN STYLES */
@@ -47,37 +55,22 @@
   flex-direction: column;
 }
 
-/* Invisible spacer to push the middle column down to align with categories */
-.prod-col-header-spacer {
-  height: 54px; /* Matches Main Title height + margin */
-  width: 100%;
-}
-
 .prod-main-title {
-  font-size: 32px;
-  font-weight: 400; /* Lighter weight like the screenshot */
+  font-size: 22px;
+  /* Slightly smaller for 4 cols */
+  font-weight: 600;
   color: #000;
   margin: 0;
-  margin-bottom: 24px;
-  line-height: 1;
-}
-
-.prod-block {
-  margin-bottom: 10px;
-}
-
-.prod-cat {
-  font-size: 20px;
-  font-weight: 600; /* Bold Categories */
-  color: #333;
-  margin-top: 0;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 10px;
 }
 
 .prod-list {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
   margin-bottom: 15px;
 }
 
@@ -90,39 +83,13 @@
 }
 
 .prod-link-label {
-  font-size: 15px;
-  color: #555; /* Dark gray text */
+  font-size: 14px;
+  color: #555;
+  /* Dark gray text */
   line-height: 1.4;
   transition: color 0.2s;
 }
 
-/* Optional description text styling */
-.prod-link-desc {
-  font-size: 13px;
-  color: #888;
-  font-weight: 400;
-}
 .prod-link:hover .prod-link-label {
   color: #26AAE3;
-}
-
-/* DIVIDER LINE */
-.prod-divider-line {
-  height: 1px;
-  background: #eee;
-  margin-top: 15px;
-  margin-bottom: 25px;
-  width: 100%;
-}
-/* Hide the last divider in a column if needed */
-.prod-col .prod-block:last-child .prod-divider-line:last-child {
-  display: none;
-}
-.line1, 
-.line2 {
-  font-size: 20px;   /* Matches .prod-cat size */
-  font-weight: 600;  /* Matches .prod-cat weight */
-  color: #333;
-  margin-top: 10px;
-  margin-bottom: 10px;
 }

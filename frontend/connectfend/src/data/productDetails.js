@@ -6,7 +6,7 @@ import modbusIcon from "../assets/mod.png";
 import gaskimg from "../assets/gaskonnect.png"
 import mbus from "../assets/Mbuspic.png";
 import clampon from "../assets/clampon.png";
-import protocol from "../assets/protocol.png" ;
+import protocol from "../assets/protocol.png";
 import tcp from "../assets/tcp.png" // change to your real image
 
 const productDetails = {
@@ -187,12 +187,12 @@ const productDetails = {
     ]
   },
   serialToTcp: {
-  id: 5,
-  title: "Serial to TCP Convertor",
-  subtitle: "U2301 – Modbus RTU to Ethernet",
-  heroImage: tcp, // replace with real product image
+    id: 5,
+    title: "Serial to TCP Convertor",
+    subtitle: "U2301 – Modbus RTU to Ethernet",
+    heroImage: tcp, // replace with real product image
 
-  description: `
+    description: `
     The U2301 RS485 Modbus RTU to TCP Converter extends data communication 
     over Ethernet/LAN networks with secure two-way communication. It enables
     seamless transmission of Modbus slave data to centralized servers without
@@ -200,40 +200,249 @@ const productDetails = {
     scaling, byte swap, polling modes, and full remote configuration.
   `,
 
-  brochure: "/brochures/Serial-TCP-Convertors.pdf",
+    brochure: "/brochures/Serial-TCP-Convertors.pdf",
 
-  features: [
-    // From Page 1
-    "Intelligent Modbus, Ethernet/LAN Connectivity",                         // :contentReference[oaicite:1]{index=1}
-    "1 x RS-485 port for Modbus, 1 x TCP/IP port",                           // :contentReference[oaicite:2]{index=2}
-    "Configure and read multiple slave IDs",                                 // :contentReference[oaicite:3]{index=3}
-    "Supports data type, byte swapping and scaling",                         // :contentReference[oaicite:4]{index=4}
-    "Supports Transparent Modbus or Device Polling modes",                   // :contentReference[oaicite:5]{index=5}
-    "Smart inbuilt data handler ensures reliable transfer",                  // :contentReference[oaicite:6]{index=6}
+    features: [
+      // From Page 1
+      "Intelligent Modbus, Ethernet/LAN Connectivity",                         // :contentReference[oaicite:1]{index=1}
+      "1 x RS-485 port for Modbus, 1 x TCP/IP port",                           // :contentReference[oaicite:2]{index=2}
+      "Configure and read multiple slave IDs",                                 // :contentReference[oaicite:3]{index=3}
+      "Supports data type, byte swapping and scaling",                         // :contentReference[oaicite:4]{index=4}
+      "Supports Transparent Modbus or Device Polling modes",                   // :contentReference[oaicite:5]{index=5}
+      "Smart inbuilt data handler ensures reliable transfer",                  // :contentReference[oaicite:6]{index=6}
 
-    // From Page 2
-    "Authorized number list for command & configuration",                    // :contentReference[oaicite:7]{index=7}
-    "Configurable TCP/HTTP",
-    "Remote configuration through TCP/IP",
-    "LED indicators for Modbus TX/RX status",
-    "Keep-Alive command for stable socket connection"
-  ],
+      // From Page 2
+      "Authorized number list for command & configuration",                    // :contentReference[oaicite:7]{index=7}
+      "Configurable TCP/HTTP",
+      "Remote configuration through TCP/IP",
+      "LED indicators for Modbus TX/RX status",
+      "Keep-Alive command for stable socket connection"
+    ],
 
-  advantages: [
-    "Reliable Modbus to Ethernet connectivity",
-    "Supports multiple slaves",
-    "Cloud-ready integration",
-    "Robust and secure communication",
-    "Industrial-grade stability"
-  ],
+    advantages: [
+      "Reliable Modbus to Ethernet connectivity",
+      "Supports multiple slaves",
+      "Cloud-ready integration",
+      "Robust and secure communication",
+      "Industrial-grade stability"
+    ],
 
-  communicationIcons: [
-    { icon: lteIcon },
-    { icon: bacnetIcon},
-    { icon: mbusIcon},
-    { icon: modbusIcon}
-  ]
-}
+    communicationIcons: [
+      { icon: lteIcon },
+      { icon: bacnetIcon },
+      { icon: mbusIcon },
+      { icon: modbusIcon }
+    ]
+  },
+  u902x: {
+    id: 6,
+    title: "Electromagnetic Flow Meter",
+    subtitle: "U90 Series",
+    heroImage: protocol, // Placeholder
+    description: "High-precision electromagnetic flow meter for conductive liquids.",
+    brochure: "#",
+    features: ["High accuracy", "Robust design", "Wide range of applications"],
+    advantages: ["Reliable measurement", "Maintenance free", "Long service life"],
+    communicationIcons: [{ icon: mbusIcon }, { icon: modbusIcon }]
+  },
+  u501x: {
+    id: 7,
+    title: "Compact BTU Meter",
+    subtitle: "U50 Series",
+    heroImage: protocol, // Placeholder
+    description: "Compact thermal energy meter for precise heating and cooling measurement.",
+    brochure: "#",
+    features: ["Compact size", "Easy installation", "MID certified"],
+    advantages: ["Cost-effective", "High precision", "Long battery life"],
+    communicationIcons: [{ icon: mbusIcon }]
+  },
+  tkn2041: {
+    id: 8,
+    title: "Electromagnetic Flow Meter",
+    subtitle: "TKN2041",
+    heroImage: protocol, // Placeholder
+    description: "Industrial grade electromagnetic flow meter for water and wastewater applications.",
+    brochure: "#",
+    features: ["IP68 protection", "Bi-directional measurement", "Empty pipe detection"],
+    advantages: ["Rugged construction", "No moving parts", "Minimal pressure loss"],
+    communicationIcons: [{ icon: modbusIcon }]
+  },
+  tkn2031: {
+    id: 9,
+    title: "Portable Clamp-On Flow Meter",
+    subtitle: "TKN2031",
+    heroImage: protocol, // Placeholder
+    description: "Portable ultrasonic flow meter for non-intrusive flow verification and surveys.",
+    brochure: "#",
+    features: ["Battery powered", "Easy setup", "Data logging"],
+    advantages: ["Portable", "Non-intrusive", "Versatile"],
+    communicationIcons: [{ icon: modbusIcon }]
+  },
+  tkn2903: {
+    id: 10,
+    title: "Current Sensing Switch",
+    subtitle: "TKN2903",
+    heroImage: protocol, // Placeholder
+    description: "Adjustable current sensing switch for monitoring electrical loads.",
+    brochure: "#",
+    features: ["Adjustable setpoint", "Solid state output", "LED indication"],
+    advantages: ["Reliable load monitoring", "Compact", "Easy to use"],
+    communicationIcons: []
+  },
+  tkn2201: {
+    id: 11,
+    title: "Smart Shut-off Valve",
+    subtitle: "TKN2201",
+    heroImage: protocol, // Placeholder
+    description: "Battery-operated smart valve for remote water flow control.",
+    brochure: "#",
+    features: ["Remote control", "Leak detection", "Battery operated"],
+    advantages: ["Prevent water damage", "Automated control", "Long battery life"],
+    communicationIcons: [{ icon: mbusIcon }]
+  },
+  tkn2101: {
+    id: 12,
+    title: "Smart Shut-off Valve",
+    subtitle: "TKN2101",
+    heroImage: protocol, // Placeholder
+    description: "Advanced smart valve with integrated flow monitoring capabilities.",
+    brochure: "#",
+    features: ["Flow monitoring", "Remote shut-off", "Tamper alarm"],
+    advantages: ["Integrated solution", "Secure", "Efficient"],
+    communicationIcons: [{ icon: mbusIcon }]
+  },
+  "4g-cloud": {
+    id: 13,
+    title: "4G Cloud Internet Gateway",
+    subtitle: "UC420M",
+    heroImage: lteIcon, // Placeholder
+    description: "Industrial 4G gateway for secure and reliable IoT cloud connectivity.",
+    brochure: "#",
+    features: ["4G LTE connectivity", "VPN support", "Industrial grade"],
+    advantages: ["Reliable connection", "Secure data transmission", "Easy deployment"],
+    communicationIcons: [{ icon: lteIcon }]
+  },
+  "u2601u-s20": {
+    id: 14,
+    title: "USB MBus Master",
+    subtitle: "U2601U",
+    heroImage: mbus, // Placeholder
+    description: "Portable USB to M-Bus master for device configuration and reading.",
+    brochure: "#",
+    features: ["USB interface", "Short circuit protection", "Power over USB"],
+    advantages: ["Portable", "Easy to use", "Driverless installation"],
+    communicationIcons: [{ icon: mbusIcon }]
+  },
+  "u2701p-supply": {
+    id: 15,
+    title: "Power Supply",
+    subtitle: "U2701P",
+    heroImage: protocol, // Placeholder
+    description: "Reliable 24V DC power supply for industrial automation components.",
+    brochure: "#",
+    features: ["Din-rail mount", "Overload protection", "High efficiency"],
+    advantages: ["Stable power", "Compact", "Industrial grade"],
+    communicationIcons: []
+  },
+  "ubill-enterprise": {
+    id: 16,
+    title: "UBill Enterprise",
+    subtitle: "Billing Platform",
+    heroImage: protocol, // Placeholder
+    description: "Comprehensive utility billing and management platform for large portfolios.",
+    brochure: "#",
+    features: ["Multi-tenant support", "Automated invoicing", "Payment gateway integration"],
+    advantages: ["Streamlined billing", "Reduced error", "Improved cash flow"],
+    communicationIcons: []
+  },
+  uenergy: {
+    id: 17,
+    title: "UEnergy Dashboard",
+    subtitle: "Energy Management",
+    heroImage: protocol, // Placeholder
+    description: "Advanced energy analytics dashboard for monitoring consumption and costs.",
+    brochure: "#",
+    features: ["Real-time monitoring", "Cost allocation", "Reporting tools"],
+    advantages: ["Energy savings", "Visual insights", "Decision support"],
+    communicationIcons: []
+  },
+  umanage: {
+    id: 18,
+    title: "UManage Software",
+    subtitle: "Maintenance Management",
+    heroImage: protocol, // Placeholder
+    description: "Digital facility maintenance and asset management solution.",
+    brochure: "#",
+    features: ["Work order management", "Asset tracking", "Preventive maintenance"],
+    advantages: ["Optimized operations", "Asset longevity", "Digital workflow"],
+    communicationIcons: []
+  },
+  "ubill-mbus": {
+    id: 19,
+    title: "UBill M-Bus Reader",
+    subtitle: "Software Tool",
+    heroImage: protocol, // Placeholder
+    description: "Free utility tool for reading and diagnosing M-Bus devices.",
+    brochure: "#",
+    features: ["Device scanning", "Data readout", "Network diagnostics"],
+    advantages: ["Free tool", "Easy diagnostics", "Quick setup"],
+    communicationIcons: [{ icon: mbusIcon }]
+  },
+  "ubill-ibm": {
+    id: 20,
+    title: "UBill IBM",
+    subtitle: "Integrated Billing Module",
+    heroImage: protocol, // Placeholder
+    description: "Integrated billing module for seamless ERP connectivity.",
+    brochure: "#",
+    features: ["ERP Integration", "Automated data sync", "Custom rules"],
+    advantages: ["Seamless data flow", "Efficiency", "Accuracy"],
+    communicationIcons: []
+  },
+  "ubill-amr": {
+    id: 21,
+    title: "UBill AMR",
+    subtitle: "Automated Meter Reading",
+    heroImage: protocol, // Placeholder
+    description: "Desktop-based automated meter reading software.",
+    brochure: "#",
+    features: ["Automated reading", "Report generation", "Local database"],
+    advantages: ["Eliminate manual reading", "Fast processing", "Secure local data"],
+    communicationIcons: []
+  },
+  "ubill-vcm": {
+    id: 22,
+    title: "UBill VCM",
+    subtitle: "Voucher & Credit Management",
+    heroImage: protocol, // Placeholder
+    description: "System for managing utility credits and vouchers.",
+    brochure: "#",
+    features: ["Credit management", "Voucher generation", "User portal"],
+    advantages: ["Prepayment control", "Revenue assurance", "User convenience"],
+    communicationIcons: []
+  },
+  "ubill-prepaid": {
+    id: 23,
+    title: "UBill Prepaid",
+    subtitle: "Prepayment System",
+    heroImage: protocol, // Placeholder
+    description: "Complete prepayment solution for utility vending.",
+    brochure: "#",
+    features: ["Token vending", "STS compliance", "Mobile app support"],
+    advantages: ["Revenue protection", "Pay-as-you-go", "Flexible vending"],
+    communicationIcons: []
+  },
+  "ubill-bms": {
+    id: 24,
+    title: "UBill BMS",
+    subtitle: "Billing Management System",
+    heroImage: protocol, // Placeholder
+    description: "BMS integrated billing solution for smart buildings.",
+    brochure: "#",
+    features: ["BMS integration", "Live monitoring", "Tenant portal"],
+    advantages: ["Smart building ready", "Unified platform", "Real-time control"],
+    communicationIcons: []
+  }
 
 
 };
