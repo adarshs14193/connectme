@@ -10,6 +10,8 @@ import LatestNews from "../newsdata/latestNews";
 import Services from "../services/services";
 
 export default function LandingPage() {
+  const [isVideoLoaded, setIsVideoLoaded] = React.useState(false);
+
   return (
     <div>
       <div className="landing-container">
@@ -32,7 +34,21 @@ export default function LandingPage() {
 
           {/* Right Column: Windowed Video */}
           <div className="hero-window">
-            <video className="landing-video" autoPlay loop muted playsInline>
+            {/* LOADER OVERLAY */}
+            {!isVideoLoaded && (
+              <div className="video-loader">
+                <div className="spinner"></div>
+              </div>
+            )}
+
+            <video
+              className={`landing-video ${isVideoLoaded ? "loaded" : ""}`}
+              autoPlay
+              loop
+              muted
+              playsInline
+              onLoadedData={() => setIsVideoLoaded(true)}
+            >
               <source src={bgVideo} type="video/mp4" />
             </video>
           </div>
