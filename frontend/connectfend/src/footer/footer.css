@@ -82,7 +82,7 @@
   margin-bottom: 25px;
   font-size: 16px;
   text-decoration: underline;
-    color: #fff;
+  color: #fff;
 }
 
 /* MIDDLE */
@@ -109,9 +109,9 @@
 }
 
 .footer-middle a:hover {
-    color: #000;
-  
-}   
+  color: #000;
+
+}
 
 /* RIGHT SECTION */
 .footer-right a {
@@ -123,8 +123,8 @@
 }
 
 .footer-right a:hover {
-    color: #000;
-  
+  color: #000;
+
 }
 
 .footer-location {
@@ -145,7 +145,8 @@
 /* Line matches width of the copyright text */
 .footer-line {
   width: 100%;
-  max-width: 1000px;   /* Adjust if needed */
+  max-width: 1000px;
+  /* Adjust if needed */
   border: none;
   border-top: 1px solid white;
   margin: 14px auto 10px;
@@ -157,5 +158,40 @@
   font-size: 23px;
   font-weight: 400;
   text-align: center;
-    margin: 0;
+
+  .footer-bottom {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 850px) {
+  .footer {
+    padding: 40px 20px 0px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 40px;
+    align-items: flex-start;
+    /* Or center if preferred */
+  }
+
+  .footer-left {
+    max-width: 100%;
+  }
+
+  /* Reduce gap on mobile */
+  .footer-line {
+    margin-top: 30px;
+  }
+
+  .footer-input {
+    flex-direction: row;
+    /* Keep input and button together */
+    width: 100%;
+  }
+
+  .footer-input input {
+    width: 100%;
+  }
 }

@@ -2,11 +2,13 @@ import "./header.css";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/logo.png";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 import ProductsDropdown from "./productsDropdown.jsx";
 
 export default function Header() {
   const [openDropdown, setOpenDropdown] = useState("");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -21,7 +23,14 @@ export default function Header() {
   };
 
   // Close dropdown when selecting menu item
-  const handleMenuClick = () => setOpenDropdown("");
+  const handleMenuClick = () => {
+    setOpenDropdown("");
+    setMobileMenuOpen(false);
+  };
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
 
   return (
     <header className="header">
@@ -31,8 +40,13 @@ export default function Header() {
         <a href="/"><img src={Logo} alt="Company Logo" /></a>
       </div>
 
+      {/* HAMBURGER ICON */}
+      <div className="mobile-menu-icon" onClick={toggleMobileMenu}>
+        {mobileMenuOpen ? <FaTimes /> : <FaBars />}
+      </div>
+
       {/* NAV */}
-      <nav className="nav">
+      <nav className={`nav ${mobileMenuOpen ? "active" : ""}`}>
         <ul>
 
           {/* PRODUCTS DROPDOWN */}
@@ -60,14 +74,15 @@ export default function Header() {
             </span>
           </li>
 
-          <li><Link to="/work">Work</Link></li>
-          <li><Link to="/blog">Blog</Link></li>
-          <li><Link to="/about">About</Link></li>
+          <li><Link to="/work" onClick={handleMenuClick}>Work</Link></li>
+          <li><Link to="/blog" onClick={handleMenuClick}>Blog</Link></li>
+          <li><Link to="/about" onClick={handleMenuClick}>About</Link></li>
+          <li className="mobile-only"><Link to="/contact" className="mobile-contact-btn" onClick={handleMenuClick}>Contact</Link></li>
         </ul>
       </nav>
 
-      {/* CONTACT BUTTON */}
-      <Link to="/contact" className="contact-btn">Contact</Link>
+      {/* CONTACT BUTTON (Desktop Only) */}
+      <Link to="/contact" className="contact-btn desktop-only">Contact</Link>
 
       {/* SERVICES DROPDOWN PANEL */}
       {openDropdown === "services" && (
