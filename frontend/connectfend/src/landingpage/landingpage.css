@@ -53,9 +53,10 @@
 }
 
 .highlight-text {
-  color: #007bff;
+  color: #26AAE3;
   /* Premium Blue Accent */
-  background: linear-gradient(120deg, #007bff 0%, #00d2ff 100%);
+  background: linear-gradient(120deg, #26AAE3 0%, #00d2ff 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -85,16 +86,16 @@
 }
 
 .cta-button.primary {
-  background: #007bff;
+  background: #26AAE3;
   color: white;
   border: none;
-  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(38, 170, 227, 0.3);
 }
 
 .cta-button.primary:hover {
-  background: #0056b3;
+  background: #1e8dbd;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+  box-shadow: 0 6px 20px rgba(38, 170, 227, 0.4);
 }
 
 .cta-button.secondary {
@@ -104,8 +105,8 @@
 }
 
 .cta-button.secondary:hover {
-  border-color: #007bff;
-  color: #007bff;
+  border-color: #26AAE3;
+  color: #26AAE3;
 }
 
 /* Right Column: Windowed Video */
@@ -163,7 +164,7 @@
   width: 40px;
   height: 40px;
   border: 4px solid rgba(0, 0, 0, 0.1);
-  border-top: 4px solid #007bff;
+  border-top: 4px solid #26AAE3;
   /* Primary Blue */
   border-radius: 50%;
   animation: spin 1s linear infinite;

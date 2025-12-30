@@ -17,9 +17,17 @@ export default function ServicesPage2() {
         const smoothScroll = () => {
             const el = document.getElementById(hash);
             if (el) {
-                el.scrollIntoView({ behavior: "smooth", block: "start" });
+                // Account for fixed header (70px) + some buffer
+                const headerOffset = 90;
+                const elementPosition = el.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
             } else {
-                setTimeout(smoothScroll, 80);
+                setTimeout(smoothScroll, 100);
             }
         };
 

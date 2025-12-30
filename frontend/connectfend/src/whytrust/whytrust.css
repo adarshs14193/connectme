@@ -33,7 +33,7 @@
   line-height: 1.38;
   color: #000;
   text-align: left;
-    margin-bottom: 70px;
+  margin-bottom: 70px;
 }
 
 /* RIGHT SIDE */
@@ -48,6 +48,8 @@
   max-width: 750px;
   border-radius: 12px;
   object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  /* Add shadow for polish */
 }
 
 /* RESPONSIVE */
@@ -55,6 +57,9 @@
   .trust-section {
     flex-direction: column;
     text-align: center;
+    padding: 60px 24px;
+    /* Reduced vertical and matched horizontal padding */
+    gap: 40px;
   }
 
   .trust-left,

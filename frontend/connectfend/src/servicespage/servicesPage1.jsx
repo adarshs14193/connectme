@@ -2,11 +2,11 @@
 import React, { useEffect, useState } from "react";
 import "./services.css";
 import smartImg from "../assets/smart.png";
-import remote1 from "../assets/remote1.png" ;
-import remote2 from "../assets/remote2.png" ;
+import remote1 from "../assets/remote1.png";
+import remote2 from "../assets/remote2.png";
 import iotl from "../assets/iotLowa.png";
 import items from "../assets/items.png";
-import left1 from "../assets/left1.png" ;
+import left1 from "../assets/left1.png";
 import right1 from "../assets/right1.png"
 
 export default function ServicesPage1() {
@@ -19,9 +19,17 @@ export default function ServicesPage1() {
     const smoothScroll = () => {
       const el = document.getElementById(hash);
       if (el) {
-        el.scrollIntoView({ behavior: "smooth", block: "start" });
+        // Account for fixed header (70px) + some buffer
+        const headerOffset = 90;
+        const elementPosition = el.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
       } else {
-        setTimeout(smoothScroll, 80);
+        setTimeout(smoothScroll, 100);
       }
     };
 
