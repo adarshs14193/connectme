@@ -16,21 +16,32 @@
 
 @media (max-width: 600px) {
   .testimonial-card {
-    width: 300px;
-    /* Smaller card width */
+    width: 85vw;
+    /* Responsive width */
+    max-width: 300px;
     height: auto;
-    min-width: 300px;
-    padding: 20px;
+    min-width: unset;
+    /* Remove min-width lock */
+    padding: 24px;
+    flex-shrink: 0;
+    /* Important for marquee */
   }
 
   .testimonial-text {
-    font-size: 18px;
-    /* Readable but smaller */
+    font-size: 16px;
+    /* Smaller font */
+    line-height: 1.4;
     margin-bottom: 20px;
   }
 
   .testimonial-title {
     font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .marquee-track {
+    gap: 20px;
+    /* Tighter gap */
   }
 }
 

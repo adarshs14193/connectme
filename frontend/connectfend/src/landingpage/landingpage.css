@@ -241,9 +241,19 @@
     flex-direction: column;
     /* Stack buttons on very small screens */
     width: 100%;
+    align-items: center;
+    /* Center buttons */
+    gap: 15px;
   }
 
   .cta-button {
     width: 100%;
+    max-width: 280px;
+    /* Prevent overly wide buttons */
+  }
+
+  .hero-text-section {
+    text-align: center;
+    /* Enforce center text */
   }
 }
