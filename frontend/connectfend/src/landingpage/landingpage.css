@@ -204,12 +204,20 @@
 
   .hero-window {
     width: 100%;
+    margin-top: 20px;
+  }
+
+  /* Tablet Typography */
+  .hero-title {
+    font-size: 3rem;
+    /* Reduce from 4rem on tablet */
   }
 }
 
 @media (max-width: 600px) {
   .landing-container {
-    padding: 0 20px;
+    padding: 0 24px;
+    /* Match Header Padding */
   }
 
   .hero-title {
