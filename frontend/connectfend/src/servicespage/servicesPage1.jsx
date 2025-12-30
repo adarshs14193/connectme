@@ -1,5 +1,6 @@
 // src/servicespage/servicesPage1.jsx
 import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import "./services.css";
 import smartImg from "../assets/smart.png";
 import remote1 from "../assets/remote1.png";
@@ -12,12 +13,14 @@ import right1 from "../assets/right1.png"
 export default function ServicesPage1() {
   const [open, setOpen] = useState("");
 
+  const { hash } = useLocation();
+
   useEffect(() => {
-    const hash = window.location.hash.substring(1);
     if (!hash) return;
 
+    const targetId = hash.substring(1); // remove '#'
     const smoothScroll = () => {
-      const el = document.getElementById(hash);
+      const el = document.getElementById(targetId);
       if (el) {
         // Account for fixed header (70px) + some buffer
         const headerOffset = 90;
@@ -29,12 +32,14 @@ export default function ServicesPage1() {
           behavior: "smooth"
         });
       } else {
+        // Try again in case of loading delay
         setTimeout(smoothScroll, 100);
       }
     };
 
-    smoothScroll();
-  }, []);
+    // Small delay to ensure DOM is ready
+    setTimeout(smoothScroll, 0);
+  }, [hash]);
 
   const toggle = (id) => {
     setOpen(open === id ? "" : id);

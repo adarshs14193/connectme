@@ -380,9 +380,11 @@ body {
 }
 
 /* Hamburger Icon - Hidden by default on Desktop */
-.mobile-menu-icon {
-  display: none !important;
-  /* Force hide on desktop */
+/* Hamburger Icon - Hidden by default on Desktop */
+@media (min-width: 851px) {
+  .mobile-menu-icon {
+    display: none !important;
+  }
 }
 
 /* Mobile Only / Desktop Only utilities */

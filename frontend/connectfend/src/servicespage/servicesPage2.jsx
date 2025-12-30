@@ -1,5 +1,6 @@
 // src/servicespage/servicesPage2.jsx
 import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import "./services.css";
 import img from "../assets/utility.png";
 import bill from "../assets/bill.png";
@@ -10,12 +11,14 @@ import dev from "../assets/development.png";
 
 export default function ServicesPage2() {
 
+    const { hash } = useLocation();
+
     useEffect(() => {
-        const hash = window.location.hash.substring(1);
         if (!hash) return;
 
+        const targetId = hash.substring(1);
         const smoothScroll = () => {
-            const el = document.getElementById(hash);
+            const el = document.getElementById(targetId);
             if (el) {
                 // Account for fixed header (70px) + some buffer
                 const headerOffset = 90;
@@ -31,8 +34,8 @@ export default function ServicesPage2() {
             }
         };
 
-        smoothScroll();
-    }, []);
+        setTimeout(smoothScroll, 0);
+    }, [hash]);
 
     return (
         <div className="services-page">

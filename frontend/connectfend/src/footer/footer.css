@@ -163,7 +163,8 @@
 
 @media (max-width: 850px) {
   .footer {
-    padding: 50px 24px 20px;
+    padding: 40px 24px 20px;
+    /* Reduced top padding for tighter feel */
   }
 
   .footer-bottom {

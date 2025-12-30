@@ -48,17 +48,24 @@
 
 @media (max-width: 768px) {
   .license-card {
-    width: 90%;
-    height: 320px;
+    width: 45%;
+    /* Keep 2 per row on tablet/mobile for better density */
+    height: auto;
+    aspect-ratio: 3/4;
+    max-width: 250px;
   }
 
   .license-title {
     font-size: 40px;
   }
 }
+
 @media (max-width: 480px) {
   .license-card {
-    height: 280px;
+    height: auto;
+    width: 80%;
+    /* Single column only on very small screens */
+    margin: 0 auto;
   }
 
   .license-title {
