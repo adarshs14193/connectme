@@ -4,15 +4,15 @@ import testimonials from "../data/testimonials";
 
 export default function Testimonial() {
 
-  // This is required only for marquee scroll smoothness
-  const repeated = [...testimonials, ...testimonials];
+  // Duplicate list 12x to ensure no blank spaces on high-res monitors during scroll
+  const repeated = Array(12).fill(testimonials).flat();
 
   return (
     <div className="testimonial-section">
       <h1 className="testimonial-title">Hear it from them</h1>
 
       <div className="testimonial-marquee">
-        <div className="marquee-track">
+        <div className="marquee-track animate-scroll-left">
 
           {repeated.map((t, index) => {
             const isOdd = index % 2 === 0;
@@ -28,13 +28,11 @@ export default function Testimonial() {
                         className="avatar"
                         style={{ background: t.avatarColor }}
                       ></div>
-
                       <div>
                         <h3>{t.name}</h3>
                         <p>{t.designation}</p>
                       </div>
                     </div>
-
                     <hr className="divider" />
                   </>
                 )}
@@ -51,7 +49,6 @@ export default function Testimonial() {
                         className="avatar"
                         style={{ background: t.avatarColor }}
                       ></div>
-
                       <div>
                         <h3>{t.name}</h3>
                         <p>{t.designation}</p>

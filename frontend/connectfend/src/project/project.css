@@ -10,6 +10,37 @@
   text-align: center;
 }
 
+/* TABS NAVIGATION */
+.work-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+  background: #fff;
+  position: sticky;
+  top: 70px;
+  /* Adjust based on header height */
+  z-index: 900;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.work-tab {
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #555;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.work-tab:hover {
+  background: #f0f9ff;
+  color: #26AAE3;
+}
+
 .projects-title {
   font-size: 55px;
   font-weight: 700;

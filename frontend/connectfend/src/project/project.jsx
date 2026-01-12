@@ -5,28 +5,48 @@ import clients from "../data/clientsData";
 import projects from "../data/projectsData";
 
 export default function OngoingProjects() {
-    
+
+    // Show only top 4 projects for existing "Our Projects"
+    const topProjects = projects.slice(0, 4);
 
     return (
-        <div className="projects-section">
-            <h2 className="projects-title">Ongoing Projects</h2>
+        <div className="projects-container">
 
-            <div className="projects-grid">
-                {projectData.map((proj) => (
-                    <div className="project-card" key={proj.id}>
-                        <img src={proj.image} className="project-img" alt="" />
-
-                        <div className="project-info">
-                            <span className="project-line">
-                                <h3 className="project-name">{proj.title}</h3>
-                                <p className="project-location">{proj.location}</p>
-                            </span>
-                            <p className="project-desc">{proj.desc}</p>
-                        </div>
-                    </div>
-                ))}
+            {/* TABS NAVIGATION */}
+            <div className="work-tabs">
+                <button className="work-tab" onClick={() => document.getElementById('our-projects').scrollIntoView({ behavior: 'smooth' })}>
+                    Our Projects
+                </button>
+                <button className="work-tab" onClick={() => document.getElementById('our-clients').scrollIntoView({ behavior: 'smooth' })}>
+                    Our Clients
+                </button>
+                <button className="work-tab" onClick={() => document.getElementById('ongoing-projects').scrollIntoView({ behavior: 'smooth' })}>
+                    Ongoing Projects
+                </button>
             </div>
-            <div className="clients-section">
+
+            {/* 1. OUR PROJECTS (Top 4) */}
+            <div id="our-projects" className="projects-section">
+                <h2 className="projects-title">Our Projects</h2>
+
+                <div className="projects-grid">
+                    {topProjects.map((proj) => (
+                        <div className="project-card" key={proj.id}>
+                            <img src={proj.image} className="project-img" alt={proj.title} />
+
+                            <div className="project-info">
+                                <span className="project-line1">
+                                    <h3 className="project-title1">{proj.title}</h3>
+                                    <p className="project-location1">{proj.location}</p></span>
+                                <p className="project-desc1">{proj.desc}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* 2. OUR CLIENTS */}
+            <div id="our-clients" className="clients-section">
                 <h2 className="clients-title">Our Clients</h2>
                 <p className="clients-subtitle">
                     We deliver 100% satisfactory results. Our proud clientele is a prime example
@@ -40,24 +60,28 @@ export default function OngoingProjects() {
                     ))}
                 </div>
             </div>
-            <div className="projects-section">
-                <h2 className="projects-title">Our Projects</h2>
+
+            {/* 3. ONGOING PROJECTS */}
+            <div id="ongoing-projects" className="projects-section">
+                <h2 className="projects-title">Ongoing Projects</h2>
 
                 <div className="projects-grid">
-                    {projects.map((proj) => (
+                    {projectData.map((proj) => (
                         <div className="project-card" key={proj.id}>
-                            <img src={proj.image} className="project-img" />
+                            <img src={proj.image} className="project-img" alt={proj.title} />
 
                             <div className="project-info">
-                                <span className="project-line1">
-                                <h3 className="project-title1">{proj.title}</h3>
-                                <p className="project-location1">{proj.location}</p></span>
-                                <p className="project-desc1">{proj.desc}</p>
+                                <span className="project-line">
+                                    <h3 className="project-name">{proj.title}</h3>
+                                    <p className="project-location">{proj.location}</p>
+                                </span>
+                                <p className="project-desc">{proj.desc}</p>
                             </div>
                         </div>
                     ))}
                 </div>
             </div>
+
         </div>
     );
 }

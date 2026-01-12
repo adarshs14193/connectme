@@ -73,37 +73,30 @@ export default function AboutPage() {
 
                 <div className="about-card">
                     <h2 className="about-card-title">Quality Standards</h2>
-                    <h3 className="about-card-sub">We have implemented</h3>
 
                     <ul>
-                        <li>methodical approach to ensuring consistently high quality in our products and services</li>
-                        <li>systematic approach to identifying and controlling workplace risks,
-                            preventing accidents and injuries, and enhancing employee wellness</li>
-                        <li>mechanism to identify and manage environmental risks, reduce environmental
-                            impacts, and promote sustainable practices.</li>
+                        <li>Methodical approach to ensuring consistently high quality in our products and services.</li>
+                        <li>Systematic control of workplace risks, preventing accidents, and enhancing employee wellness.</li>
+                        <li>Commitment to managing environmental risks and promoting sustainable practices.</li>
                     </ul>
                 </div>
 
                 <div className="about-card">
                     <h2 className="about-card-title">Our Mission</h2>
-                    <h3 className="about-card-sub">We have implemented</h3>
 
                     <ul>
-                        <li>Processes across all business areas for Increased revenue</li>
-                        <li>Real-time analysis allows for Increased equipment uptime and transparency</li>
-                        <li>Better service and more individualized offerings for Increased customer Satisfaction</li>
+                        <li>To drive operational excellence through real-time analytics and automation.</li>
+                        <li>To deliver scalable IoT solutions that optimize resource usage and reduce costs.</li>
+                        <li>To enhance customer satisfaction through innovative and reliable technology.</li>
                     </ul>
                 </div>
 
                 <div className="about-card">
                     <h2 className="about-card-title">Our Vision</h2>
-                    <h3 className="about-card-sub">We have implemented</h3>
 
                     <ul>
-                        <li>18+ years of expertise in Industrial Automation and BMS (PLC, SCADA, BMS) delivering
-                            reliable, efficient solutions.</li>
-                        <li>Developing a SaaS-based IoT platform offering scalable, OPEX-friendly,
-                            usage-based solutions aligned with industrial standards.</li>
+                        <li>To be the premier partner for Industrial Automation and Smart City solutions in the region.</li>
+                        <li>To pioneer SaaS-based IoT platforms that empower businesses with actionable insights.</li>
                     </ul>
                 </div>
 

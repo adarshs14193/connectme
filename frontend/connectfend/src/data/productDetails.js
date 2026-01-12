@@ -5,9 +5,10 @@ import mbusIcon from "../assets/Mbus.png";
 import modbusIcon from "../assets/mod.png";
 import gaskimg from "../assets/gaskonnect.png"
 import mbus from "../assets/Mbuspic.png";
-import clampon from "../assets/clampon.png";
+import clampon from "../assets/products/clampon-meter.jpg";
 import protocol from "../assets/protocol.png";
-import tcp from "../assets/tcp.png" // change to your real image
+import tcp from "../assets/tcp.png"
+import smartImg from "../assets/products/smart-valve.jpg";
 
 const productDetails = {
   gaskonnect: {
@@ -105,7 +106,7 @@ const productDetails = {
     id: 3,
     title: "Technkave - Clamp on Meters",
     subtitle: "Techknave",
-    heroImage: clampon,
+    heroImage: clampon, // Reverted to original clampon.png
 
     description: `
       Technkave TKN 202 series Wall-mount Clamp on Ultrasonic BTU/ FLOW meter 
@@ -237,8 +238,8 @@ const productDetails = {
   u902x: {
     id: 6,
     title: "Electromagnetic Flow Meter",
-    subtitle: "U90 Series",
-    heroImage: protocol, // Placeholder
+    subtitle: "High Precision",
+    heroImage: gaskimg, // Using Gas Meter image as temporary proxy for Flow Meter visual style if better than 'protocol'
     description: "High-precision electromagnetic flow meter for conductive liquids.",
     brochure: "#",
     features: ["High accuracy", "Robust design", "Wide range of applications"],
@@ -249,7 +250,7 @@ const productDetails = {
     id: 7,
     title: "Compact BTU Meter",
     subtitle: "U50 Series",
-    heroImage: protocol, // Placeholder
+    heroImage: mbus, // Using Mbus image as better placeholder than generic protocol for a meter
     description: "Compact thermal energy meter for precise heating and cooling measurement.",
     brochure: "#",
     features: ["Compact size", "Easy installation", "MID certified"],
@@ -293,7 +294,7 @@ const productDetails = {
     id: 11,
     title: "Smart Shut-off Valve",
     subtitle: "TKN2201",
-    heroImage: protocol, // Placeholder
+    heroImage: smartImg, // Reverted to original smart.png
     description: "Battery-operated smart valve for remote water flow control.",
     brochure: "#",
     features: ["Remote control", "Leak detection", "Battery operated"],
@@ -304,7 +305,7 @@ const productDetails = {
     id: 12,
     title: "Smart Shut-off Valve",
     subtitle: "TKN2101",
-    heroImage: protocol, // Placeholder
+    heroImage: smartImg, // Reverted to original smart.png
     description: "Advanced smart valve with integrated flow monitoring capabilities.",
     brochure: "#",
     features: ["Flow monitoring", "Remote shut-off", "Tamper alarm"],
@@ -326,7 +327,7 @@ const productDetails = {
     id: 14,
     title: "USB MBus Master",
     subtitle: "U2601U",
-    heroImage: mbus, // Placeholder
+    heroImage: mbus, // Correct image
     description: "Portable USB to M-Bus master for device configuration and reading.",
     brochure: "#",
     features: ["USB interface", "Short circuit protection", "Power over USB"],

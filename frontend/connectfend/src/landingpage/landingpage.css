@@ -257,3 +257,41 @@
     /* Enforce center text */
   }
 }
+
+/* ULTRA-WIDE SCREENS (4K+) */
+@media (min-width: 2500px) {
+  .landing-container {
+    padding: 0 100px;
+  }
+
+  /* Make hero content wide but centered */
+  .hero-content-wrapper {
+    max-width: 2800px;
+    margin: 0 auto;
+    gap: 100px;
+  }
+
+  .hero-title {
+    font-size: 6rem;
+  }
+
+  .hero-subtitle {
+    font-size: 2rem;
+    max-width: 100%;
+  }
+
+  .cta-button {
+    font-size: 1.5rem;
+    padding: 20px 48px;
+  }
+
+  .hero-window {
+    border-radius: 40px;
+  }
+
+  .video-loader .spinner {
+    width: 80px;
+    height: 80px;
+    border-width: 8px;
+  }
+}

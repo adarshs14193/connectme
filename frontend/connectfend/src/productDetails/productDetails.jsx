@@ -1,70 +1,135 @@
-// src/productDetails/ProductDetails.jsx
-import React from "react";
-import { useParams } from "react-router-dom";
-import details from "../data/productDetails";
+import React, { useEffect, useState } from "react";
+import { useParams, Link } from "react-router-dom";
+import productData from "../data/productData";
 import "./productDetails.css";
 
 export default function ProductDetails() {
-  const { slug } = useParams();
-  const product = details[slug];
+  const { category, subcategory, productId } = useParams();
+  const [product, setProduct] = useState(null);
+  const [relatedProducts, setRelatedProducts] = useState([]);
+  const [breadcrumbs, setBreadcrumbs] = useState([]);
 
-  if (!product) return <h2 className="not-found">Product Not Found</h2>;
+  useEffect(() => {
+    // 1. Find Product & Context
+    let foundProduct = null;
+    let foundCat = null;
+    let foundSub = null;
+
+    // Search strategy: If we have full URL params, use them for speed & context.
+    // If not, flattened search (robustness).
+
+    if (productId) {
+      for (const cat of productData) {
+        for (const sub of cat.subcategories) {
+          const match = sub.products.find(p => p.id === productId);
+          if (match) {
+            foundProduct = match;
+            foundCat = cat;
+            foundSub = sub;
+            break;
+          }
+        }
+        if (foundProduct) break;
+      }
+    }
+
+    if (foundProduct) {
+      setProduct(foundProduct);
+
+      // 2. Set Breadcrumbs
+      setBreadcrumbs([
+        { label: "Products", path: "/products" },
+        { label: foundCat.category, path: `/products/${foundCat.slug}` },
+        { label: foundSub.name, path: `/products/${foundCat.slug}/${foundSub.slug}` },
+        { label: foundProduct.name, path: "#" } // Current
+      ]);
+
+      // 3. Set Related (Same subcategory, exclude self)
+      setRelatedProducts(foundSub.products.filter(p => p.id !== foundProduct.id).slice(0, 4));
+    }
+  }, [productId, category, subcategory]);
+
+  if (!product) return <div className="pd-not-found">Loading or Product Not Found...</div>;
 
   return (
-    <div className="product-details-page">
+    <div className="pd-page">
 
-      {/* TITLE */}
-      <h1 className="pd-title">
-        <span>{product.title}</span>
-      </h1>
+      {/* BREADCRUMBS */}
+      <div className="pd-breadcrumb">
+        {breadcrumbs.map((b, i) => (
+          <span key={i}>
+            {b.path !== "#" ? <Link to={b.path}>{b.label}</Link> : <span>{b.label}</span>}
+            {i < breadcrumbs.length - 1 && " / "}
+          </span>
+        ))}
+      </div>
 
-      {/* TOP SECTION */}
-      <div className="pd-top">
-        <img src={product.heroImage} alt={product.title} className="pd-image" />
+      {/* HERO SECTION */}
+      <div className="pd-hero">
+        <div className="pd-hero-content">
+          <h1 className="pd-title">{product.name}</h1>
+          <p className="pd-tagline">{product.description}</p>
 
-        <div className="pd-info">
-          <p className="pd-desc">{product.description}</p>
-
-          {product.brochure && (
-            <a href={product.brochure} download className="pd-download">
-              Download Brochure 📥
-            </a>
-          )}
+          <div className="pd-actions">
+            <Link to="/contact" className="btn-primary">Request a Quote</Link>
+            {/* Fallback for now as we don't have real PDFs yet */}
+            <button className="btn-secondary" disabled>Download Datasheet (Coming Soon)</button>
+          </div>
+        </div>
+        <div className="pd-hero-image">
+          <img src={product.image} alt={product.name} />
         </div>
       </div>
 
-      {/* FEATURES SECTION */}
-      <div className="pd-features">
-        <h2>Features</h2>
-        <ul>
-          {product.features.map((f, i) => (
-            <li key={i}>{f}</li>
-          ))}
-        </ul>
-      </div>
+      {/* MAIN CONTENT AREA */}
+      <div className="pd-content">
 
-      {/* ADVANTAGES */}
-      <div className="pd-advantages">
-        <h2>Advantages</h2>
-        <ul>
-          {product.advantages.map((a, i) => (
-            <li key={i}>{a}</li>
-          ))}
-        </ul>
-      </div>
+        {/* FEATURES */}
+        <section className="pd-section">
+          <h2 className="section-title">Key Features</h2>
+          <ul className="pd-features-list">
+            {product.features?.map((f, i) => (
+              <li key={i}>{f}</li>
+            )) || <p>No specific features listed.</p>}
+          </ul>
+        </section>
 
-      {/* COMMUNICATION INTERFACE */}
-      <div className="pd-communication">
-        <h2>Communication Interface</h2>
-
-        <div className="pd-icons-row">
-          {product.communicationIcons.map((c, i) => (
-            <div key={i} className="pd-icon-block">
-              <img src={c.icon} alt={c.label} />
-              <p>{c.label}</p>
+        {/* SPECIFICATIONS */}
+        {product.specs && (
+          <section className="pd-section">
+            <h2 className="section-title">Specifications</h2>
+            <div className="pd-specs-table-wrapper">
+              <table className="pd-specs-table">
+                <tbody>
+                  {Object.entries(product.specs).map(([key, val]) => (
+                    <tr key={key}>
+                      <td className="spec-label">{key.charAt(0).toUpperCase() + key.slice(1)}</td>
+                      <td className="spec-value">{val}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
-          ))}
-        </div>
+          </section>
+        )}
+
+        {/* RELATED PRODUCTS */}
+        {relatedProducts.length > 0 && (
+          <section className="pd-section pd-related">
+            <h2 className="section-title">Related Products</h2>
+            <div className="related-grid">
+              {relatedProducts.map(rp => (
+                <Link to={`/products/${category}/${subcategory}/${rp.id}`} key={rp.id} className="related-card">
+                  <div className="related-img">
+                    <img src={rp.image} alt={rp.name} />
+                  </div>
+                  <h4 className="related-title">{rp.name}</h4>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
+
       </div>
 
     </div>

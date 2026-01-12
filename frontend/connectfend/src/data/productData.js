@@ -1,0 +1,612 @@
+// src/data/productData.js
+// Master Data Source for ConnectMe Products
+import logo from "../assets/logo.png"; // Fallback image
+
+// Images (using placeholders where needed, map real imports if available)
+const placeholder = logo;
+
+const productData = [
+    // =========================================================================
+    // METERS
+    // =========================================================================
+    {
+        category: "Meters",
+        slug: "meters",
+        subcategories: [
+            {
+                name: "Inline Ultrasonic BTU Meters",
+                slug: "inline-ultrasonic-btu",
+                products: [
+                    {
+                        id: "uflo-u60",
+                        name: "UFLO U60 Advances Series",
+                        description: "High-accuracy ultrasonic BTU meter for advanced HVAC metering, designed for precise energy management.",
+                        image: placeholder,
+                        features: [
+                            "Advanced ultrasonic flow sensing",
+                            "Integrated temperature monitoring",
+                            "BMS compatible (M-Bus / Modbus)",
+                            "Long-life battery option"
+                        ],
+                        specs: {
+                            technology: "Ultrasonic",
+                            application: "HVAC Energy Metering",
+                            protocol: "M-Bus, Modbus"
+                        },
+                        tags: ["HVAC", "Advanced", "BMS Ready"]
+                    },
+                    {
+                        id: "uflo-u50",
+                        name: "UFLO U50 Compact Series",
+                        description: "Compact ultrasonic BTU meter for residential and commercial sub-metering, designed for tight spaces.",
+                        image: placeholder,
+                        features: [
+                            "Compact footprint",
+                            "Reliable ultrasonic measurement",
+                            "Cost-effective sub-metering",
+                            "Easy installation"
+                        ],
+                        specs: {
+                            technology: "Ultrasonic",
+                            application: "Sub-metering",
+                            size: "Compact"
+                        },
+                        tags: ["Residential", "Compact", "Retrofit"]
+                    },
+                    {
+                        id: "uflo-u50-bulk",
+                        name: "UFLO U50 Bulk BTU Meter",
+                        description: "Robust bulk BTU meter for main line billing, designed for high-flow commercial applications.",
+                        image: placeholder,
+                        features: [
+                            "Wide flow range support",
+                            "Heavy-duty construction",
+                            "High precision billing grade"
+                        ],
+                        specs: {
+                            technology: "Ultrasonic",
+                            application: "Bulk Metering",
+                            size: "Large DN"
+                        },
+                        tags: ["Commercial", "Billing", "Main Line"]
+                    }
+                ]
+            },
+            {
+                name: "Inline Ultrasonic Water Meters",
+                slug: "inline-ultrasonic-water",
+                products: [
+                    {
+                        id: "uflo-u40",
+                        name: "UFLO U40 Compact Series",
+                        description: "Smart ultrasonic water meter for accurate consumption tracking, designed for residential use.",
+                        image: placeholder,
+                        features: ["No moving parts", "Leak detection capability", "Long battery life"],
+                        tags: ["Water", "Residential", "Smart"]
+                    },
+                    {
+                        id: "uflo-u40-bulk",
+                        name: "UFLO U40 Bulk Flow Meter",
+                        description: "Industrial-grade bulk water meter for distribution networks, designed for reliable long-term metering.",
+                        image: placeholder,
+                        features: ["Wide dynamic range", "Durable industrial design", "Remote reading ready"],
+                        tags: ["Water", "Industrial", "Distribution"]
+                    },
+                    {
+                        id: "uflo-u70",
+                        name: "UFLO U70 Advanced Hot Water",
+                        description: "Specialized ultrasonic meter for hot water systems, designed for high-temperature durability.",
+                        image: placeholder,
+                        features: ["High temp resistance", "Precision measurement", "District heating compatible"],
+                        tags: ["Hot Water", "High Temp", "Specialized"]
+                    }
+                ]
+            },
+            {
+                name: "Inline Electromagnetic Flow Meters",
+                slug: "inline-electromagnetic",
+                products: [
+                    {
+                        id: "gima-b",
+                        name: "GIMA-B Type Electromagnetic Flow Meter",
+                        description: "High-performance mag meter for conductive liquids, designed for wastewater and industrial processes.",
+                        image: placeholder,
+                        features: ["No pressure loss", "High accuracy for conductive fluids", "Chemical resistant liner"],
+                        tags: ["Industrial", "Wastewater", "Conductive"]
+                    },
+                    {
+                        id: "gima-h",
+                        name: "GIMA-H Type Electromagnetic Flow Meter",
+                        description: "Hygiene-focused electromagnetic meter, designed for food, beverage, and sanitary applications.",
+                        image: placeholder,
+                        features: ["Sanitary connections", "Food-grade materials", "CIP compatible"],
+                        tags: ["Sanitary", "Food & Bev", "Hygiene"]
+                    },
+                    {
+                        id: "gima-ib",
+                        name: "GIMA-IB Insertion Electromagnetic Flow Meter",
+                        description: "Insertion mag meter for large pipes, designed for cost-effective retrofit metering.",
+                        image: placeholder,
+                        features: ["Hot tap installation", "Cost-effective for large pipes", "Low maintenance"],
+                        tags: ["Retrofit", "Large Pipe", "Insertion"]
+                    }
+                ]
+            },
+            {
+                name: "Clamp-on Ultrasonic BTU/Flow Meters",
+                slug: "clamp-on-ultrasonic",
+                products: [
+                    {
+                        id: "tkn202",
+                        name: "Techknave TKN202 Clamp-on BTU/FLOW Meter",
+                        description: "Non-invasive clamp-on meter for flow and energy measurement, designed for quick retrofit without cutting pipes.",
+                        image: placeholder,
+                        features: ["Non-invasive installation", "Ideal for existing buildings", "Flow and Energy modes"],
+                        specs: { type: "Clamp-on", medium: "Liquid" },
+                        tags: ["Retrofit", "Non-invasive", "Quick Install"]
+                    },
+                    {
+                        id: "tkn204",
+                        name: "Techknave TKN204 Enhanced Clamp-on BTU/Flow Meter",
+                        description: "Enhanced precision clamp-on meter with advanced signal processing, designed for challenging flow conditions.",
+                        image: placeholder,
+                        features: ["Enhanced accuracy", "Difficult pipe material support", "Advanced diagnostics"],
+                        tags: ["Precision", "Advanced", "Clamp-on"]
+                    },
+                    {
+                        id: "tkn205",
+                        name: "Techknave TKN205 Insertion BTU/Flow Meter",
+                        description: "Wetted insertion transducers for ultrasonic metering, designed for maximum accuracy in large pipes.",
+                        image: placeholder,
+                        features: ["Direct contact measurement", "High accuracy", "Large diameter support"],
+                        tags: ["Insertion", "High Accuracy", "Large Pipe"]
+                    },
+                    {
+                        id: "tkn203",
+                        name: "Techknave TKN203 Portable Flow Meter",
+                        description: "Battery-powered portable flow meter, designed for energy audits and temporary spot checks.",
+                        image: placeholder,
+                        features: ["Carry case included", "Battery powered", "Data logging"],
+                        tags: ["Portable", "Audit", "Tool"]
+                    }
+                ]
+            },
+            {
+                name: "Gas Meters",
+                slug: "gas-meters",
+                products: [
+                    {
+                        id: "tkn2801c",
+                        name: "Gaskonnect TKN2801C",
+                        description: "AMR & Solenoid Controller with Pulse to M-Bus, designed to upgrade mechanical gas meters to smart metering.",
+                        image: placeholder,
+                        features: ["Pulse counting", "Valve control", "M-Bus connectivity"],
+                        tags: ["Gas", "Upgrade", "Retrofit"]
+                    },
+                    {
+                        id: "tkn2810x",
+                        name: "Gaskonnect TKN2810X (Smart Gas Meter)",
+                        description: "Fully integrated smart gas meter with remote shutoff, designed for safety and automated billing.",
+                        image: placeholder,
+                        features: ["Integrated valve", "Wireless communication", "Safety shutoff"],
+                        tags: ["Gas", "Smart", "Safety"]
+                    }
+                ]
+            }
+        ]
+    },
+
+    // =========================================================================
+    // VALVES & SWITCHES
+    // =========================================================================
+    {
+        category: "Valves & Switches",
+        slug: "valves-switches",
+        subcategories: [
+            {
+                name: "Smart Valve Controller (Segregated)",
+                slug: "smart-valve-controller",
+                products: [
+                    {
+                        id: "smart-mbus-valve-controller",
+                        name: "Smart M-Bus Valve Controller",
+                        description: "Controller module that connects standard valves to wired M-Bus networks, built for reliable BMS integration.",
+                        image: placeholder,
+                        tags: ["M-Bus", "Controller", "BMS"]
+                    },
+                    {
+                        id: "smart-lorawan-valve-controller",
+                        name: "Smart LoRaWAN Valve Controller",
+                        description: "Wireless valve controller connecting standard valves to LoRaWAN IoT networks, built for long-range remote control.",
+                        image: placeholder,
+                        tags: ["LoRaWAN", "Wireless", "IoT"]
+                    }
+                ]
+            },
+            {
+                name: "Smart Compact Switch (Relay control)",
+                slug: "smart-compact-switch",
+                products: [
+                    {
+                        id: "smart-mbus-switch",
+                        name: "Smart M-Bus Switch Compact",
+                        description: "Compact relay switch for M-Bus networks, designed for remote load management over existing wires.",
+                        image: placeholder,
+                        tags: ["M-Bus", "Switch", "Relay"]
+                    },
+                    {
+                        id: "smart-lorawan-switch",
+                        name: "Smart LoRaWAN Switch Compact",
+                        description: "Wireless LoRaWAN relay switch, designed for turning devices on/off across large campuses.",
+                        image: placeholder,
+                        tags: ["LoRaWAN", "Switch", "Wireless"]
+                    },
+                    {
+                        id: "smart-nbiot-switch",
+                        name: "Smart NB-IoT Switch Compact",
+                        description: "Cellular NB-IoT relay switch, designed for deep indoor penetration and city-wide control.",
+                        image: placeholder,
+                        tags: ["NB-IoT", "Cellular", "Switch"]
+                    },
+                    {
+                        id: "gaskonnect-mbus-relay",
+                        name: "Gaskonnect M-Bus Relay Module",
+                        description: "Specialized M-Bus relay for gas safety systems, designed to actuate gas valves remotely.",
+                        image: placeholder,
+                        tags: ["Gas", "Safety", "M-Bus"]
+                    }
+                ]
+            },
+            {
+                name: "Smart Compact Valve",
+                slug: "smart-compact-valve",
+                products: [
+                    {
+                        id: "smart-mbus-valve",
+                        name: "Smart M-Bus Valve Compact",
+                        description: "All-in-one motorized valve with M-Bus interface, designed for direct BMS water control.",
+                        image: placeholder,
+                        tags: ["Integrated", "Valve", "M-Bus"]
+                    },
+                    {
+                        id: "smart-lorawan-valve",
+                        name: "Smart LoRaWAN Valve Compact",
+                        description: "Wireless motorized valve for LoRaWAN networks, designed for completely wireless fluid management.",
+                        image: placeholder,
+                        tags: ["Integrated", "Valve", "LoRaWAN"]
+                    }
+                ]
+            },
+            {
+                name: "Integrated BTU Meter & Valve",
+                slug: "integrated-btu-valve",
+                products: [
+                    {
+                        id: "integrated-btu-valve",
+                        name: "Integrated BTU Meter and Valve",
+                        description: "Combined energy meter and control valve unit, designed for seamless prepaid billing and tenant management.",
+                        image: placeholder,
+                        features: ["Metering + Control", "Prepaid ready", "Compact install"],
+                        tags: ["Hybrid", "Prepaid", "All-in-One"]
+                    }
+                ]
+            }
+        ]
+    },
+
+    // =========================================================================
+    // GATEWAYS & CONNECTIVITY
+    // =========================================================================
+    {
+        category: "Gateways & Connectivity",
+        slug: "gateways-connectivity",
+        subcategories: [
+            {
+                name: "M-Bus Products",
+                slug: "m-bus-products",
+                products: [
+                    {
+                        id: "mbus-master",
+                        name: "M-Bus Master",
+                        description: "Central M-Bus master unit for powering and reading up to 250 wired meters, built for robust data collection.",
+                        image: placeholder,
+                        tags: ["M-Bus", "Infrastructure", "Wired"]
+                    },
+                    {
+                        id: "mbus-level-converter",
+                        name: "M-Bus Level Converter",
+                        description: "Signal converter for extending M-Bus networks and interfacing with PC/PLC systems.",
+                        image: placeholder,
+                        tags: ["Converter", "Signal", "Infrastructure"]
+                    },
+                    {
+                        id: "mbus-usb-powered",
+                        name: "M-Bus USB Powered",
+                        description: "Portable USB M-Bus master for laptop connection, designed for field configuration and debugging.",
+                        image: placeholder,
+                        tags: ["Portable", "USB", "Tool"]
+                    }
+                ]
+            },
+            {
+                name: "Converters",
+                slug: "converters",
+                products: [
+                    {
+                        id: "mbus-modbus-converter",
+                        name: "M-Bus to Modbus Converter",
+                        description: "Gateway that translates M-Bus meter data into Modbus RTU/TCP, built for BMS integration.",
+                        image: placeholder,
+                        tags: ["Gateway", "BMS", "Translation"]
+                    },
+                    {
+                        id: "modbus-bacnet-converter",
+                        name: "Modbus to Bacnet IP Converter",
+                        description: "Protocol converter bridging industrial Modbus devices to building automation Bacnet IP networks.",
+                        image: placeholder,
+                        tags: ["BACnet", "Building Auto", "Converter"]
+                    },
+                    {
+                        id: "mbus-lorawan-converter",
+                        name: "M-Bus to LoRaWAN Converter",
+                        description: "Wireless bridge that sends wired M-Bus meter data over LoRaWAN networks, designed for retrofit IoT projects.",
+                        image: placeholder,
+                        tags: ["IoT", "Wireless Bridge", "Retrofit"]
+                    },
+                    {
+                        id: "pulse-lorawan-converter",
+                        name: "Pulse to LoRaWAN Converter",
+                        description: "IoT module that digitizes standard pulse output meters and transmits readings via LoRaWAN.",
+                        image: placeholder,
+                        tags: ["Pulse", "IoT", "Digitalization"]
+                    }
+                ]
+            },
+            {
+                name: "Gateways",
+                slug: "gateways",
+                products: [
+                    {
+                        id: "edge-controllers",
+                        name: "Edge Controllers",
+                        description: "Smart edge processing unit for local data logic and control, designed for distributed intelligence.",
+                        image: placeholder,
+                        tags: ["Edge", "Computing", "Smart"]
+                    },
+                    {
+                        id: "mbus-gateway",
+                        name: "M-Bus Gateway",
+                        description: "Dedicated gateway for pushing M-Bus data to cloud or server endpoints via TCP/IP or 4G.",
+                        image: placeholder,
+                        tags: ["Connectivity", "Cloud", "M-Bus"]
+                    },
+                    {
+                        id: "modbus-gateway",
+                        name: "Modbus Gateway",
+                        description: "Robust gateway ensuring reliable bi-directional communication with RS485 Modbus networks.",
+                        image: placeholder,
+                        tags: ["Industrial", "RS485", "Modbus"]
+                    },
+                    {
+                        id: "lorawan-gateway",
+                        name: "LoRaWAN Gateway",
+                        description: "Base station for LoRaWAN networks, ensuring deep indoor coverage for wireless IoT sensors.",
+                        image: placeholder,
+                        tags: ["IoT", "Infrastructure", "Wireless"]
+                    },
+                    {
+                        id: "tosilock",
+                        name: "TosiLock – Industrial Gateway",
+                        description: "Secure industrial gateway with VPN and firewall capabilities, designed for critical infrastructure protection.",
+                        image: placeholder,
+                        tags: ["Security", "VPN", "Industrial"]
+                    }
+                ]
+            },
+            {
+                name: "Power Supplies",
+                slug: "power-supplies",
+                products: [
+                    {
+                        id: "power-supply",
+                        name: "Power Supply",
+                        description: "Industrial grade power supply unit for gateways and M-Bus masters, ensuring 24/7 reliability.",
+                        image: placeholder,
+                        tags: ["Power", "Accessory", "Industrial"]
+                    }
+                ]
+            }
+        ]
+    },
+
+    // =========================================================================
+    // SENSORS & ACTUATORS
+    // =========================================================================
+    {
+        category: "Sensors & Actuators",
+        slug: "sensors-actuators",
+        subcategories: [
+            {
+                name: "Air Quality Sensor",
+                slug: "air-quality",
+                products: [
+                    {
+                        id: "iaq-sensor",
+                        name: "Indoor Air Quality Sensor",
+                        description: "Comprehensive sensor monitoring CO2, TVOC, and PM2.5, designed for healthy building certification.",
+                        image: placeholder,
+                        tags: ["Health", "IAQ", "Environment"]
+                    },
+                    {
+                        id: "temp-humidity-sensor",
+                        name: "Temperature and Humidity Sensor",
+                        description: "Precision environmental sensor for HVAC control loops and comfort monitoring.",
+                        image: placeholder,
+                        tags: ["HVAC", "Climate", "Basic"]
+                    }
+                ]
+            },
+            {
+                name: "Water Leak Detection Sensor",
+                slug: "water-leak",
+                products: [
+                    {
+                        id: "wireless-zone-leak",
+                        name: "Wireless Zone Leak Sensor",
+                        description: "Area-based leak detector using sensing cable, wireless for easy deployment in server rooms.",
+                        image: placeholder,
+                        tags: ["Leak", "Wireless", "Zone"]
+                    },
+                    {
+                        id: "wireless-single-leak",
+                        name: "Wireless Single Point Leak Sensor",
+                        description: "Spot leak detector for drip trays and specific risk points, fully wireless.",
+                        image: placeholder,
+                        tags: ["Leak", "Spot", "Wireless"]
+                    },
+                    {
+                        id: "wireless-cap-level",
+                        name: "Wireless Capacitive Level Sensor",
+                        description: "Non-contact level sensor for tanks, wireless transmission for remote inventory management.",
+                        image: placeholder,
+                        tags: ["Level", "Wireless", "Tank"]
+                    },
+                    // ... Wired variants ...
+                    {
+                        id: "wired-zone-leak",
+                        name: "Wired Zone Leak Sensor",
+                        description: "Reliable wired area leak detection for integration with traditional BMS panels.",
+                        image: placeholder,
+                        tags: ["Leak", "Wired", "BMS"]
+                    },
+                    {
+                        id: "wired-single-leak",
+                        name: "Wired Single Point Leak Sensor",
+                        description: "Hard-wired point sensor for critical drip detection in mechanical rooms.",
+                        image: placeholder,
+                        tags: ["Leak", "Wired", "Point"]
+                    },
+                    {
+                        id: "wired-cap-level",
+                        name: "Wired Capacitive Level Sensor",
+                        description: "Wired continuous level monitoring probe for industrial tanks.",
+                        image: placeholder,
+                        tags: ["Level", "Industrial", "Wired"]
+                    }
+                ]
+            }
+        ]
+    },
+
+    // =========================================================================
+    // SOFTWARE
+    // =========================================================================
+    {
+        category: "Software",
+        slug: "software",
+        subcategories: [
+            {
+                name: "Utility Billing",
+                slug: "utility-billing",
+                products: [
+                    {
+                        id: "bms-integration",
+                        name: "BMS Integration Module",
+                        description: "Software connector that bridges metering data directly into Building Management Systems.",
+                        image: placeholder,
+                        tags: ["Integration", "BMS", "Connector"]
+                    },
+                    {
+                        id: "desktop-tenant-billing",
+                        name: "Desktop Tenant Billing Module",
+                        description: "Local PC-based software for generating tenant utility bills in simple properties.",
+                        image: placeholder,
+                        tags: ["Billing", "Local", "Simple"]
+                    },
+                    {
+                        id: "enterprise-tenant-billing",
+                        name: "Enterprise Tenant Billing Module",
+                        description: "Cloud-based scalable billing platform for multi-site property portfolios.",
+                        image: placeholder,
+                        tags: ["Cloud", "Enterprise", "Multi-site"]
+                    },
+                    {
+                        id: "prepaid-billing",
+                        name: "Prepaid Billing Module",
+                        description: "Pay-as-you-go metering management software, designed for revenue protection.",
+                        image: placeholder,
+                        tags: ["Revenue", "Prepaid", "Management"]
+                    }
+                ]
+            },
+            {
+                name: "AMR and MDMS",
+                slug: "amr-mdms",
+                products: [
+                    {
+                        id: "desktop-amr",
+                        name: "Desktop AMR Module",
+                        description: "Automated Meter Reading tool for local data collection and export.",
+                        image: placeholder,
+                        tags: ["AMR", "Collection", "Local"]
+                    },
+                    {
+                        id: "enterprise-mdms",
+                        name: "Enterprise MDMS System",
+                        description: "Complete Meter Data Management System for validating and storing massive utility datasets.",
+                        image: placeholder,
+                        tags: ["Big Data", "Utility", "Validation"]
+                    },
+                    {
+                        id: "intelligent-amr-ai",
+                        name: "Intelligent AMR AI",
+                        description: "AI-powered analytics layer that detects anomalies and theft in meter data patterns.",
+                        image: placeholder,
+                        tags: ["AI", "Analytics", "Theft"]
+                    }
+                ]
+            },
+            {
+                name: "Energy Monitoring",
+                slug: "energy-monitoring",
+                products: [
+                    {
+                        id: "ems-platform",
+                        name: "EMS",
+                        description: "Comprehensive Energy Management System for visualizing consumption and identifying savings.",
+                        image: placeholder,
+                        tags: ["Visualization", "Green", "Savings"]
+                    }
+                ]
+            },
+            {
+                name: "Valve Control Management",
+                slug: "valve-control",
+                products: [
+                    {
+                        id: "vcm-platform",
+                        name: "VCM",
+                        description: "Centralized dashboard for remote actuation and status monitoring of smart valves.",
+                        image: placeholder,
+                        tags: ["Control", "Remote", "Safety"]
+                    }
+                ]
+            },
+            {
+                name: "Maintenance Management Software",
+                slug: "maintenance",
+                products: [
+                    {
+                        id: "mms-platform",
+                        name: "MMS",
+                        description: "Asset management suite for tracking meter health, calibration schedules, and maintenance tickets.",
+                        image: placeholder,
+                        tags: ["Assets", "Maintenance", "Lifecycle"]
+                    }
+                ]
+            }
+        ]
+    }
+];
+
+export default productData;

@@ -5,6 +5,7 @@ import Logo from "../assets/logo.png";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 import ProductsDropdown from "./productsDropdown.jsx";
+import ServicesDropdown from "./ServicesDropdown.jsx";
 
 export default function Header() {
   const [openDropdown, setOpenDropdown] = useState("");
@@ -72,6 +73,11 @@ export default function Header() {
             >
               Services
             </span>
+
+            {/* SERVICES DROPDOWN PANEL */}
+            {openDropdown === "services" && (
+              <ServicesDropdown onClose={handleMenuClick} />
+            )}
           </li>
 
           <li><Link to="/work" onClick={handleMenuClick}>Work</Link></li>
@@ -83,64 +89,8 @@ export default function Header() {
 
       {/* CONTACT BUTTON (Desktop Only) */}
       <Link to="/contact" className="contact-btn desktop-only">Contact</Link>
-
-      {/* SERVICES DROPDOWN PANEL */}
-      {openDropdown === "services" && (
-        <div className="mega-dropdown" onClick={(e) => e.stopPropagation()}>
-
-          <div className="mega-col">
-            <h3 className="mega-title">Solutions</h3>
-
-            <Link to="/services1#smart-metering" className="mega-link" onClick={handleMenuClick}>
-              Smart Metering & Utility Billing
-            </Link>
-
-            <Link to="/services1#remote-connect" className="mega-link" onClick={handleMenuClick}>
-              Remote Connectivity & VPN
-            </Link>
-
-            <Link to="/services1#lorawan" className="mega-link" onClick={handleMenuClick}>
-              IoT & LoRaWAN
-            </Link>
-
-            <Link to="/services1#lorawan-sensors" className="mega-link" onClick={handleMenuClick}>
-              LoRaWAN Sensors
-            </Link>
-          </div>
-
-          <div className="mega-divider"></div>
-
-          <div className="mega-col">
-            <h3 className="mega-title">Services</h3>
-
-            <Link to="/services2#utility-maintenance" className="mega-link" onClick={handleMenuClick}>
-              Utility Meter Maintenance
-            </Link>
-
-            <Link to="/services2#billing" className="mega-link" onClick={handleMenuClick}>
-              Billing Managed Service
-            </Link>
-
-            <Link to="/services2#amc" className="mega-link" onClick={handleMenuClick}>
-              AMC & Training
-            </Link>
-
-            <Link to="/services2#consultancy" className="mega-link" onClick={handleMenuClick}>
-              Technical Consultancy
-            </Link>
-
-            <Link to="/services2#plc" className="mega-link" onClick={handleMenuClick}>
-              PLC & SCADA
-            </Link>
-
-            <Link to="/services2#development" className="mega-link" onClick={handleMenuClick}>
-              Development & Services
-            </Link>
-          </div>
-
-        </div>
-      )}
-
     </header>
   );
 }
+
+

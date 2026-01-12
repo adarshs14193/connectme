@@ -1,31 +1,38 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import productsMenu from "../data/productsMenu";
+import productData from "../data/productData";
 import "./productsDropdown.css";
 
 export default function ProductsDropdown({ onClose }) {
-  const categories = productsMenu.items; // Access the main items array
-
   return (
     <div className="prod-dropdown" onClick={(e) => e.stopPropagation()}>
       <div className="prod-grid-container">
-        {categories.map((catBlock, idx) => (
+        {productData.map((catBlock, idx) => (
           <div key={idx} className="prod-col">
-            <h1 className="prod-main-title">{catBlock.category}</h1>
+            {/* Main Category Title (Clickable to category listing) */}
+            <Link
+              to={`/products/${catBlock.slug}`}
+              className="prod-main-title-link"
+              onClick={onClose}
+            >
+              <h1 className="prod-main-title">{catBlock.category}</h1>
+            </Link>
+
             <div className="prod-list">
-              {catBlock.items.map((item, i) => (
+              {catBlock.subcategories.map((sub, i) => (
                 <Link
                   key={i}
-                  to={`/products/${item.slug}`}
+                  to={`/products/${catBlock.slug}/${sub.slug}`}
                   className="prod-link"
                   onClick={onClose}
                 >
-                  <span className="prod-link-label">{item.label}</span>
+                  <span className="prod-link-label">{sub.name}</span>
                 </Link>
               ))}
             </div>
-            {/* Divider for visual separation if needed, or remove if CSS handles spacing */}
-            {idx < categories.length - 1 && <div className="prod-mobile-divider"></div>}
+
+            {/* Mobile divider */}
+            {idx < productData.length - 1 && <div className="prod-mobile-divider"></div>}
           </div>
         ))}
       </div>

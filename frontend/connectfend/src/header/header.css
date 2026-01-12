@@ -238,6 +238,19 @@ body {
     border-radius: 50%;
     transition: background 0.2s;
     cursor: pointer;
+    color: #26AAE3;
+    /* Force Azure Blue for visibility */
+    background: transparent;
+    /* Ensure no white-on-white issues */
+    border: 1px solid rgba(38, 170, 227, 0.2);
+    /* Subtle border */
+  }
+
+  .mobile-menu-icon svg {
+    fill: #26AAE3;
+    /* Force SVG color */
+    width: 24px;
+    height: 24px;
   }
 
   .mobile-menu-icon:active {

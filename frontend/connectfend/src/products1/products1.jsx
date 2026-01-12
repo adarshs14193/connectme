@@ -1,7 +1,7 @@
 import React from "react";
 import "./products1.css";
 import products from "../data/product";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 
 
 export default function Products() {
@@ -14,25 +14,22 @@ export default function Products() {
       <h1 className="products-title">Our Products</h1>
 
       <div className="marquee">
-        <div className="marquee-track">
+        <div className="marquee-track animate-scroll-left">
 
-          {/* duplicate exactly 4 items for seamless infinite loop */}
-          {[...displayProducts, ...displayProducts].map((p, index) => (
+          {/* duplicate items 12x for seamless infinite loop on ultra-wide screens (4k+) */}
+          {Array(12).fill(displayProducts).flat().map((p, index) => (
             <div key={index} className="product-card">
-
-              <img src={p.image} alt={p.title} className="product-image" />
-
-              <div className="product-overlay">
-                <div className="overlay-top">
-                  <p>{p.subtitle}</p>
-                  <h2>{p.title}</h2>
-                </div>
-
-                <div className="overlay-bottom">
-                  <Link to={p.link}><button>View More</button></Link>
-                </div>
+              <div className="product-image-wrapper">
+                <img src={p.image} className="product-image" alt={p.title} />
               </div>
 
+              <div className="product-details">
+                <p className="product-subtitle">{p.subtitle}</p>
+                <h2 className="product-title">{p.title}</h2>
+                <Link to={p.link} className="view-more-link">
+                  View More &rarr;
+                </Link>
+              </div>
             </div>
           ))}
 

@@ -78,3 +78,29 @@
     font-size: 20px;
   }
 }
+
+/* ULTRA-WIDE SCREENS (4K+) */
+@media (min-width: 2500px) {
+  .trust-section {
+    padding: 120px 100px;
+    gap: 120px;
+  }
+
+  .trust-left {
+    max-width: 1000px;
+  }
+
+  .trust-title {
+    font-size: 80px;
+    margin-bottom: 60px;
+  }
+
+  .trust-text {
+    font-size: 36px;
+    margin-bottom: 80px;
+  }
+
+  .trust-right img {
+    max-width: 1200px;
+  }
+}

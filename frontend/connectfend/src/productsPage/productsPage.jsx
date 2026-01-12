@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./productsPage.css";
 import products from "../data/product";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 import FilterMenu from "../filters/FilterMenu";
 
 export default function ProductsPage() {
@@ -41,7 +41,7 @@ export default function ProductsPage() {
         </button>
 
         {showFilter && (
-          <FilterMenu 
+          <FilterMenu
             filters={filters}
             setFilters={setFilters}
             onApply={applyFilter}
@@ -54,17 +54,16 @@ export default function ProductsPage() {
       <div className="products-grid">
         {currentItems.map((p, index) => (
           <div key={index} className="product-card">
-            <img src={p.image} className="product-image" />
+            <div className="product-image-wrapper">
+              <img src={p.image} className="product-image" alt={p.title} />
+            </div>
 
-            <div className="product-overlay">
-              <div className="overlay-top">
-                <p>{p.subtitle}</p>
-                <h2>{p.title}</h2>
-              </div>
-
-              <div className="overlay-bottom">
-                <Link to={p.link}><button>View More</button></Link>
-              </div>
+            <div className="product-details">
+              <p className="product-subtitle">{p.subtitle}</p>
+              <h2 className="product-title">{p.title}</h2>
+              <Link to={p.link} className="view-more-link">
+                View More &rarr;
+              </Link>
             </div>
           </div>
         ))}

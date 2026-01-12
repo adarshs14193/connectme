@@ -5,13 +5,19 @@
   left: 50%;
   transform: translateX(-50%);
 
-  width: 1200px;
-  /* Wider to accommodate 4 cols comfortably */
+  width: 1400px;
+  /* Wider to accommodate 5 cols comfortably */
   background: #fff;
   border-radius: 8px;
   /* Slightly sharper corners */
 
-  padding: 40px 50px;
+  /* ADDED: Drop Shadow for better visibility */
+  box-shadow: 0 15px 50px -5px rgba(0, 0, 0, 0.15), 0 8px 20px -5px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  /* Subtle border */
+
+  padding: 40px 30px;
   padding-bottom: 60px;
   /* Increased padding to prevent overlap */
 
@@ -20,9 +26,9 @@
 
 .prod-grid-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  /* 4 Equal Columns for Meters, Valves, Gateways, Software */
-  column-gap: 30px;
+  grid-template-columns: repeat(5, 1fr);
+  /* 5 Equal Columns for Meters, Valves, Gateways, Sensors, Software */
+  column-gap: 20px;
 }
 
 /* VIEW MORE / CONTACT BUTTON */
@@ -92,4 +98,51 @@
 
 .prod-link:hover .prod-link-label {
   color: #26AAE3;
+}
+
+/* =============================
+    MOBILE RESPONSIVE
+============================= */
+@media (max-width: 850px) {
+  .prod-dropdown {
+    position: static;
+    width: 100%;
+    transform: none;
+    left: auto;
+    top: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: none;
+    border-radius: 0;
+    max-height: 80vh;
+    /* Allow scrolling if very tall */
+    overflow-y: auto;
+  }
+
+  .prod-grid-container {
+    grid-template-columns: 1fr;
+    /* Single column for clarity on mobile, or 2 if preferred but 1 is safer for nested lists */
+    gap: 20px;
+  }
+
+  /* Make headings smaller */
+  .prod-main-title {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  /* Adjust view more button positioning */
+  .prod-view-more {
+    position: static;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    padding: 12px;
+    background: #f9f9f9;
+  }
+
+  .prod-col {
+    margin-bottom: 10px;
+  }
 }
