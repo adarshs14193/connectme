@@ -73,8 +73,13 @@ export default function ProductDetails() {
 
           <div className="pd-actions">
             <Link to="/contact" className="btn-primary">Request a Quote</Link>
-            {/* Fallback for now as we don't have real PDFs yet */}
-            <button className="btn-secondary" disabled>Download Datasheet (Coming Soon)</button>
+            {product.brochure ? (
+              <a href={product.brochure} target="_blank" rel="noopener noreferrer" className="btn-secondary">
+                Download Datasheet
+              </a>
+            ) : (
+              <button className="btn-secondary" disabled>Download Datasheet (Coming Soon)</button>
+            )}
           </div>
         </div>
         <div className="pd-hero-image">

@@ -40,11 +40,13 @@ body {
 }
 
 .logo-img {
-  height: 48px;
-  /* Fits well within 70px header */
+  height: 70px;
+  /* Increased to match text size as requested */
   width: auto;
   object-fit: contain;
   display: block;
+  transform: scale(1.5);
+  margin-left: 15px;
 }
 
 /* 

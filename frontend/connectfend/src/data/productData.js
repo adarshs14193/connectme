@@ -1,9 +1,37 @@
 // src/data/productData.js
 // Master Data Source for ConnectMe Products
 import logo from "../assets/logo.png"; // Fallback image
+import ufloU60Img from "../assets/uflo_u60_advanced.png";
+import ufloU40CompactPdf from "../assets/brochures/uflo_u40_compact.pdf";
+import ufloU40BulkPdf from "../assets/brochures/uflo_u40_bulk.pdf";
+import ufloU60Pdf from "../assets/brochures/uflo_u60.pdf";
+import ufloU50Pdf from "../assets/brochures/uflo_u50.pdf";
+import tknSwitchPdf from "../assets/brochures/tkn2101c_switch.pdf";
+import tknValvePdf from "../assets/brochures/tkn29xxc_valve.pdf";
+import tkn204Pdf from "../assets/brochures/tkn204_enhanced.pdf";
+import tkn205Pdf from "../assets/brochures/tkn205_insertion.pdf";
+import tkn202Pdf from "../assets/brochures/tkn202_clampon.pdf";
+import gimaBPdf from "../assets/brochures/gima_b.pdf";
+import gimaHPdf from "../assets/brochures/gima_h.pdf";
+import gimaIbPdf from "../assets/brochures/gima_ib.pdf";
+import tkn2801Pdf from "../assets/brochures/tkn2801_gas.pdf";
+import tkn2810xPdf from "../assets/brochures/tkn2810x_gas.pdf";
+import mbusMasterPdf from "../assets/brochures/mbus_master.pdf";
+import mbusLevelPdf from "../assets/brochures/mbus_level.pdf";
+import mbusUsbPdf from "../assets/brochures/mbus_usb.pdf";
+import edgeModulePdf from "../assets/brochures/edge_module.pdf";
+import tosilockPdf from "../assets/brochures/tosilock.pdf";
+import smpsPdf from "../assets/brochures/smps_24v.pdf";
+import leakPdf from "../assets/brochures/leak_detection.pdf";
+import bmsIntegrationPdf from "../assets/brochures/bms_integration.pdf";
+import tenantBillingPdf from "../assets/brochures/tenant_billing.pdf";
+import emsPlatformPdf from "../assets/brochures/ems_platform.pdf";
+import vcmPlatformPdf from "../assets/brochures/vcm_platform.pdf";
+import mmsPlatformPdf from "../assets/brochures/mms_platform.pdf";
 
 // Images (using placeholders where needed, map real imports if available)
 const placeholder = logo;
+
 
 const productData = [
     // =========================================================================
@@ -21,7 +49,8 @@ const productData = [
                         id: "uflo-u60",
                         name: "UFLO U60 Advances Series",
                         description: "High-accuracy ultrasonic BTU meter for advanced HVAC metering, designed for precise energy management.",
-                        image: placeholder,
+                        image: ufloU60Img,
+                        brochure: ufloU60Pdf,
                         features: [
                             "Advanced ultrasonic flow sensing",
                             "Integrated temperature monitoring",
@@ -40,6 +69,7 @@ const productData = [
                         name: "UFLO U50 Compact Series",
                         description: "Compact ultrasonic BTU meter for residential and commercial sub-metering, designed for tight spaces.",
                         image: placeholder,
+                        brochure: ufloU50Pdf,
                         features: [
                             "Compact footprint",
                             "Reliable ultrasonic measurement",
@@ -81,6 +111,7 @@ const productData = [
                         name: "UFLO U40 Compact Series",
                         description: "Smart ultrasonic water meter for accurate consumption tracking, designed for residential use.",
                         image: placeholder,
+                        brochure: ufloU40CompactPdf,
                         features: ["No moving parts", "Leak detection capability", "Long battery life"],
                         tags: ["Water", "Residential", "Smart"]
                     },
@@ -89,6 +120,7 @@ const productData = [
                         name: "UFLO U40 Bulk Flow Meter",
                         description: "Industrial-grade bulk water meter for distribution networks, designed for reliable long-term metering.",
                         image: placeholder,
+                        brochure: ufloU40BulkPdf,
                         features: ["Wide dynamic range", "Durable industrial design", "Remote reading ready"],
                         tags: ["Water", "Industrial", "Distribution"]
                     },
@@ -111,6 +143,7 @@ const productData = [
                         name: "GIMA-B Type Electromagnetic Flow Meter",
                         description: "High-performance mag meter for conductive liquids, designed for wastewater and industrial processes.",
                         image: placeholder,
+                        brochure: gimaBPdf,
                         features: ["No pressure loss", "High accuracy for conductive fluids", "Chemical resistant liner"],
                         tags: ["Industrial", "Wastewater", "Conductive"]
                     },
@@ -119,6 +152,7 @@ const productData = [
                         name: "GIMA-H Type Electromagnetic Flow Meter",
                         description: "Hygiene-focused electromagnetic meter, designed for food, beverage, and sanitary applications.",
                         image: placeholder,
+                        brochure: gimaHPdf,
                         features: ["Sanitary connections", "Food-grade materials", "CIP compatible"],
                         tags: ["Sanitary", "Food & Bev", "Hygiene"]
                     },
@@ -127,6 +161,7 @@ const productData = [
                         name: "GIMA-IB Insertion Electromagnetic Flow Meter",
                         description: "Insertion mag meter for large pipes, designed for cost-effective retrofit metering.",
                         image: placeholder,
+                        brochure: gimaIbPdf,
                         features: ["Hot tap installation", "Cost-effective for large pipes", "Low maintenance"],
                         tags: ["Retrofit", "Large Pipe", "Insertion"]
                     }
@@ -141,6 +176,7 @@ const productData = [
                         name: "Techknave TKN202 Clamp-on BTU/FLOW Meter",
                         description: "Non-invasive clamp-on meter for flow and energy measurement, designed for quick retrofit without cutting pipes.",
                         image: placeholder,
+                        brochure: tkn202Pdf,
                         features: ["Non-invasive installation", "Ideal for existing buildings", "Flow and Energy modes"],
                         specs: { type: "Clamp-on", medium: "Liquid" },
                         tags: ["Retrofit", "Non-invasive", "Quick Install"]
@@ -150,6 +186,7 @@ const productData = [
                         name: "Techknave TKN204 Enhanced Clamp-on BTU/Flow Meter",
                         description: "Enhanced precision clamp-on meter with advanced signal processing, designed for challenging flow conditions.",
                         image: placeholder,
+                        brochure: tkn204Pdf,
                         features: ["Enhanced accuracy", "Difficult pipe material support", "Advanced diagnostics"],
                         tags: ["Precision", "Advanced", "Clamp-on"]
                     },
@@ -158,6 +195,7 @@ const productData = [
                         name: "Techknave TKN205 Insertion BTU/Flow Meter",
                         description: "Wetted insertion transducers for ultrasonic metering, designed for maximum accuracy in large pipes.",
                         image: placeholder,
+                        brochure: tkn205Pdf,
                         features: ["Direct contact measurement", "High accuracy", "Large diameter support"],
                         tags: ["Insertion", "High Accuracy", "Large Pipe"]
                     },
@@ -180,6 +218,7 @@ const productData = [
                         name: "Gaskonnect TKN2801C",
                         description: "AMR & Solenoid Controller with Pulse to M-Bus, designed to upgrade mechanical gas meters to smart metering.",
                         image: placeholder,
+                        brochure: tkn2801Pdf,
                         features: ["Pulse counting", "Valve control", "M-Bus connectivity"],
                         tags: ["Gas", "Upgrade", "Retrofit"]
                     },
@@ -188,6 +227,7 @@ const productData = [
                         name: "Gaskonnect TKN2810X (Smart Gas Meter)",
                         description: "Fully integrated smart gas meter with remote shutoff, designed for safety and automated billing.",
                         image: placeholder,
+                        brochure: tkn2810xPdf,
                         features: ["Integrated valve", "Wireless communication", "Safety shutoff"],
                         tags: ["Gas", "Smart", "Safety"]
                     }
@@ -232,6 +272,7 @@ const productData = [
                         name: "Smart M-Bus Switch Compact",
                         description: "Compact relay switch for M-Bus networks, designed for remote load management over existing wires.",
                         image: placeholder,
+                        brochure: tknSwitchPdf,
                         tags: ["M-Bus", "Switch", "Relay"]
                     },
                     {
@@ -266,6 +307,7 @@ const productData = [
                         name: "Smart M-Bus Valve Compact",
                         description: "All-in-one motorized valve with M-Bus interface, designed for direct BMS water control.",
                         image: placeholder,
+                        brochure: tknValvePdf,
                         tags: ["Integrated", "Valve", "M-Bus"]
                     },
                     {
@@ -310,6 +352,7 @@ const productData = [
                         name: "M-Bus Master",
                         description: "Central M-Bus master unit for powering and reading up to 250 wired meters, built for robust data collection.",
                         image: placeholder,
+                        brochure: mbusMasterPdf,
                         tags: ["M-Bus", "Infrastructure", "Wired"]
                     },
                     {
@@ -317,6 +360,7 @@ const productData = [
                         name: "M-Bus Level Converter",
                         description: "Signal converter for extending M-Bus networks and interfacing with PC/PLC systems.",
                         image: placeholder,
+                        brochure: mbusLevelPdf,
                         tags: ["Converter", "Signal", "Infrastructure"]
                     },
                     {
@@ -324,6 +368,7 @@ const productData = [
                         name: "M-Bus USB Powered",
                         description: "Portable USB M-Bus master for laptop connection, designed for field configuration and debugging.",
                         image: placeholder,
+                        brochure: mbusUsbPdf,
                         tags: ["Portable", "USB", "Tool"]
                     }
                 ]
@@ -371,6 +416,7 @@ const productData = [
                         name: "Edge Controllers",
                         description: "Smart edge processing unit for local data logic and control, designed for distributed intelligence.",
                         image: placeholder,
+                        brochure: edgeModulePdf,
                         tags: ["Edge", "Computing", "Smart"]
                     },
                     {
@@ -399,6 +445,7 @@ const productData = [
                         name: "TosiLock – Industrial Gateway",
                         description: "Secure industrial gateway with VPN and firewall capabilities, designed for critical infrastructure protection.",
                         image: placeholder,
+                        brochure: tosilockPdf,
                         tags: ["Security", "VPN", "Industrial"]
                     }
                 ]
@@ -412,6 +459,7 @@ const productData = [
                         name: "Power Supply",
                         description: "Industrial grade power supply unit for gateways and M-Bus masters, ensuring 24/7 reliability.",
                         image: placeholder,
+                        brochure: smpsPdf,
                         tags: ["Power", "Accessory", "Industrial"]
                     }
                 ]
@@ -455,6 +503,7 @@ const productData = [
                         name: "Wireless Zone Leak Sensor",
                         description: "Area-based leak detector using sensing cable, wireless for easy deployment in server rooms.",
                         image: placeholder,
+                        brochure: leakPdf,
                         tags: ["Leak", "Wireless", "Zone"]
                     },
                     {
@@ -514,6 +563,7 @@ const productData = [
                         name: "BMS Integration Module",
                         description: "Software connector that bridges metering data directly into Building Management Systems.",
                         image: placeholder,
+                        brochure: bmsIntegrationPdf,
                         tags: ["Integration", "BMS", "Connector"]
                     },
                     {
@@ -521,6 +571,7 @@ const productData = [
                         name: "Desktop Tenant Billing Module",
                         description: "Local PC-based software for generating tenant utility bills in simple properties.",
                         image: placeholder,
+                        brochure: tenantBillingPdf,
                         tags: ["Billing", "Local", "Simple"]
                     },
                     {
@@ -575,6 +626,7 @@ const productData = [
                         name: "EMS",
                         description: "Comprehensive Energy Management System for visualizing consumption and identifying savings.",
                         image: placeholder,
+                        brochure: emsPlatformPdf,
                         tags: ["Visualization", "Green", "Savings"]
                     }
                 ]
@@ -588,6 +640,7 @@ const productData = [
                         name: "VCM",
                         description: "Centralized dashboard for remote actuation and status monitoring of smart valves.",
                         image: placeholder,
+                        brochure: vcmPlatformPdf,
                         tags: ["Control", "Remote", "Safety"]
                     }
                 ]
@@ -601,6 +654,7 @@ const productData = [
                         name: "MMS",
                         description: "Asset management suite for tracking meter health, calibration schedules, and maintenance tickets.",
                         image: placeholder,
+                        brochure: mmsPlatformPdf,
                         tags: ["Assets", "Maintenance", "Lifecycle"]
                     }
                 ]

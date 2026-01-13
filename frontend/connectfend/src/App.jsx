@@ -30,8 +30,8 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
 
-        {/* OLD ROUTE - Kept as fallback or main landing */}
-        <Route path="/products" element={<ProductsPage />} />
+        {/* NEW ROUTE - Unified Listing Page */}
+        <Route path="/products" element={<ListingPage />} />
 
         {/* NEW PRODUCT ARCHITECTURE ROUTES */}
         <Route path="/products/:category" element={<ListingPage />} />

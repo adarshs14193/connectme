@@ -2,7 +2,7 @@ import "./header.css";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/logo.png";
-import headerLogo from "../assets/header_logo.png";
+import headerLogo from "../assets/connectME_logo_transparent.png";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 import ProductsDropdown from "./productsDropdown.jsx";
@@ -83,17 +83,17 @@ export default function Header() {
             )}
           </li>
 
-          {/* SOFTWARES DROPDOWN (Maps to 'Services' Data Category) */}
+          {/* SERVICES DROPDOWN */}
           <li>
             <span
               className="nav-link"
-              onClick={(e) => toggleDropdown("softwares", e)}
+              onClick={(e) => toggleDropdown("services", e)}
             >
-              Softwares
+              Services
             </span>
 
-            {/* SOFTWARES PANEL */}
-            {openDropdown === "softwares" && (
+            {/* SERVICES PANEL */}
+            {openDropdown === "services" && (
               <ServicesDropdown onClose={handleMenuClick} specificCategory="Services" />
             )}
           </li>
