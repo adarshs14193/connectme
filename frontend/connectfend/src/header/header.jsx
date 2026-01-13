@@ -2,6 +2,7 @@ import "./header.css";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/logo.png";
+import headerLogo from "../assets/header_logo.png";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 import ProductsDropdown from "./productsDropdown.jsx";
@@ -38,7 +39,9 @@ export default function Header() {
 
       {/* LOGO */}
       <div className="logo">
-        <a href="/" className="logo-text">ConnectME</a>
+        <a href="/">
+          <img src={headerLogo} alt="ConnectME" className="logo-img" />
+        </a>
       </div>
 
       {/* HAMBURGER ICON */}

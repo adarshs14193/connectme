@@ -9,6 +9,7 @@ import founder2 from "../assets/founder2.jpg";
 import iso9001 from "../assets/iso_9001.png";
 import iso14001 from "../assets/iso_14001.png";
 import iso45001 from "../assets/iso_45001.png";
+import teamGroup from "../assets/team_group.jpg";
 
 export default function AboutPage() {
     return (
@@ -32,8 +33,8 @@ export default function AboutPage() {
                     {/* LEFT IMAGE */}
                     <div className="about-image-box">
                         <img
-                            src={dubai}
-                            alt="Dubai"
+                            src={teamGroup}
+                            alt="ConnectME Team"
                             className="about-image"
                         />
                     </div>
