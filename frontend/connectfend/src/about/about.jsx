@@ -4,6 +4,7 @@ import dubai from "../assets/dubai.png";
 import heroImg from "../assets/logo.png";
 
 import founder from "../assets/founder.jpg";
+import founder2 from "../assets/founder2.jpg";
 
 export default function AboutPage() {
     return (
@@ -145,7 +146,7 @@ export default function AboutPage() {
                         </ul>
                     </div>
 
-                    <img src={heroImg} alt="Mr. Esakimuthu" className="founder-img" style={{ objectFit: "contain", padding: "20px", background: "#f8f9fa" }} />
+                    <img src={founder2} alt="Mr. Esakimuthu" className="founder-img" />
                 </div>
 
             </div>
