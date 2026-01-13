@@ -3,6 +3,8 @@ import "./about.css";
 import dubai from "../assets/dubai.png";
 import heroImg from "../assets/logo.png";
 
+import founder from "../assets/founder.jpg";
+
 export default function AboutPage() {
     return (
 
@@ -111,7 +113,7 @@ export default function AboutPage() {
 
                 {/* FOUNDER 1 — IMAGE LEFT, TEXT RIGHT */}
                 <div className="founder-row">
-                    <img src="/images/founder1.jpg" alt="Founder 1" className="founder-img" />
+                    <img src={founder} alt="Mr. Kothandapani" className="founder-img" />
 
                     <div className="founder-info">
                         <h3 className="founder-name">Mr. Kothandapani</h3>
@@ -143,7 +145,7 @@ export default function AboutPage() {
                         </ul>
                     </div>
 
-                    <img src="/images/founder2.jpg" alt="Founder 2" className="founder-img" />
+                    <img src={heroImg} alt="Mr. Esakimuthu" className="founder-img" style={{ objectFit: "contain", padding: "20px", background: "#f8f9fa" }} />
                 </div>
 
             </div>
