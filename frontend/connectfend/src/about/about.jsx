@@ -6,6 +6,10 @@ import heroImg from "../assets/logo.png";
 import founder from "../assets/founder.jpg";
 import founder2 from "../assets/founder2.jpg";
 
+import iso9001 from "../assets/iso_9001.png";
+import iso14001 from "../assets/iso_14001.png";
+import iso45001 from "../assets/iso_45001.png";
+
 export default function AboutPage() {
     return (
 
@@ -92,17 +96,17 @@ export default function AboutPage() {
             <div className="iso-section">
 
                 <div className="iso-card">
-                    <img src={heroImg} alt="ISO 9001" className="iso-img" />
+                    <img src={iso9001} alt="ISO 9001:2015" className="iso-img" />
                     <p className="iso-label">ISO 9001:2015</p>
                 </div>
 
                 <div className="iso-card">
-                    <img src={heroImg} alt="ISO 14001" className="iso-img" />
+                    <img src={iso14001} alt="ISO 14001:2015" className="iso-img" />
                     <p className="iso-label">ISO 14001:2015</p>
                 </div>
 
                 <div className="iso-card">
-                    <img src={heroImg} alt="ISO 45001" className="iso-img" />
+                    <img src={iso45001} alt="ISO 45001:2018" className="iso-img" />
                     <p className="iso-label">ISO 45001:2018</p>
                 </div>
 

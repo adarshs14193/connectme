@@ -158,10 +158,13 @@
 }
 
 .iso-img {
-  width: 260px;
-  /* large logo exactly like screenshot */
+  width: 280px;
   height: auto;
   object-fit: contain;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid #ddd;
+  padding: 5px;
+  background: #fff;
 }
 
 .iso-label {
@@ -198,8 +201,11 @@
 /* IMAGES */
 .founder-img {
   width: 500px;
-  height: 320px;
+  height: 420px;
+  /* Increased height */
   object-fit: cover;
+  object-position: center;
+  /* Focus on face/upper body */
   border-radius: 8px;
 }
 
