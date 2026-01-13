@@ -109,19 +109,66 @@
   object-fit: contain;
 }
 
-/* SECTIONS */
-.pd-section {
-  margin-bottom: 60px;
+/* TABS */
+.pd-tabs {
+  display: flex;
+  gap: 30px;
+  border-bottom: 2px solid #eee;
+  margin-bottom: 30px;
 }
 
+.pd-tab-btn {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: #888;
+  padding: 10px 5px;
+  cursor: pointer;
+  position: relative;
+  font-family: inherit;
+  transition: color 0.3s;
+}
+
+.pd-tab-btn.active {
+  color: #26AAE3;
+}
+
+.pd-tab-btn.active::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #26AAE3;
+  animation: fadeIn 0.3s;
+}
+
+.pd-tab-content {
+  min-height: 400px;
+  /* Avoid layout shift */
+}
+
+/* FADE IN ANIM FOR TAB CONTENT */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.pd-tab-panel {
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* SECTION HEADERS WITHIN TABS (Optional, can hide if redundant) */
 .section-title {
-  font-size: 24px;
-  font-weight: 700;
-  color: #222;
-  margin-bottom: 25px;
-  border-bottom: 2px solid #f0f0f0;
-  padding-bottom: 10px;
-  display: inline-block;
+  display: none;
+  /* Hide since tab name tells you what it is */
 }
 
 /* FEATURES LIST */

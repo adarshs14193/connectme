@@ -8,6 +8,7 @@ export default function ProductDetails() {
   const [product, setProduct] = useState(null);
   const [relatedProducts, setRelatedProducts] = useState([]);
   const [breadcrumbs, setBreadcrumbs] = useState([]);
+  const [activeTab, setActiveTab] = useState('features');
 
   useEffect(() => {
     // 1. Find Product & Context
@@ -84,51 +85,83 @@ export default function ProductDetails() {
       {/* MAIN CONTENT AREA */}
       <div className="pd-content">
 
-        {/* FEATURES */}
-        <section className="pd-section">
-          <h2 className="section-title">Key Features</h2>
-          <ul className="pd-features-list">
-            {product.features?.map((f, i) => (
-              <li key={i}>{f}</li>
-            )) || <p>No specific features listed.</p>}
-          </ul>
-        </section>
+        {/* TABS NAVIGATION */}
+        <div className="pd-tabs">
+          <button
+            className={`pd-tab-btn ${activeTab === 'features' ? 'active' : ''}`}
+            onClick={() => setActiveTab('features')}
+          >
+            Key Features
+          </button>
+          {product.specs && (
+            <button
+              className={`pd-tab-btn ${activeTab === 'specs' ? 'active' : ''}`}
+              onClick={() => setActiveTab('specs')}
+            >
+              Specifications
+            </button>
+          )}
+          {relatedProducts.length > 0 && (
+            <button
+              className={`pd-tab-btn ${activeTab === 'related' ? 'active' : ''}`}
+              onClick={() => setActiveTab('related')}
+            >
+              Related Products
+            </button>
+          )}
+        </div>
 
-        {/* SPECIFICATIONS */}
-        {product.specs && (
-          <section className="pd-section">
-            <h2 className="section-title">Specifications</h2>
-            <div className="pd-specs-table-wrapper">
-              <table className="pd-specs-table">
-                <tbody>
-                  {Object.entries(product.specs).map(([key, val]) => (
-                    <tr key={key}>
-                      <td className="spec-label">{key.charAt(0).toUpperCase() + key.slice(1)}</td>
-                      <td className="spec-value">{val}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </section>
-        )}
+        {/* TAB CONTENT */}
+        <div className="pd-tab-content">
 
-        {/* RELATED PRODUCTS */}
-        {relatedProducts.length > 0 && (
-          <section className="pd-section pd-related">
-            <h2 className="section-title">Related Products</h2>
-            <div className="related-grid">
-              {relatedProducts.map(rp => (
-                <Link to={`/products/${category}/${subcategory}/${rp.id}`} key={rp.id} className="related-card">
-                  <div className="related-img">
-                    <img src={rp.image} alt={rp.name} />
-                  </div>
-                  <h4 className="related-title">{rp.name}</h4>
-                </Link>
-              ))}
-            </div>
-          </section>
-        )}
+          {/* FEATURES TAB */}
+          {activeTab === 'features' && (
+            <section className="pd-tab-panel">
+              <h2 className="section-title">Key Features</h2>
+              <ul className="pd-features-list">
+                {product.features?.map((f, i) => (
+                  <li key={i}>{f}</li>
+                )) || <p>No specific features listed.</p>}
+              </ul>
+            </section>
+          )}
+
+          {/* SPECS TAB */}
+          {activeTab === 'specs' && product.specs && (
+            <section className="pd-tab-panel">
+              <h2 className="section-title">Specifications</h2>
+              <div className="pd-specs-table-wrapper">
+                <table className="pd-specs-table">
+                  <tbody>
+                    {Object.entries(product.specs).map(([key, val]) => (
+                      <tr key={key}>
+                        <td className="spec-label">{key.charAt(0).toUpperCase() + key.slice(1)}</td>
+                        <td className="spec-value">{val}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          )}
+
+          {/* RELATED TAB */}
+          {activeTab === 'related' && relatedProducts.length > 0 && (
+            <section className="pd-tab-panel pd-related">
+              <h2 className="section-title">Related Products</h2>
+              <div className="related-grid">
+                {relatedProducts.map(rp => (
+                  <Link to={`/products/${category}/${subcategory}/${rp.id}`} key={rp.id} className="related-card">
+                    <div className="related-img">
+                      <img src={rp.image} alt={rp.name} />
+                    </div>
+                    <h4 className="related-title">{rp.name}</h4>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
+        </div>
 
       </div>
 

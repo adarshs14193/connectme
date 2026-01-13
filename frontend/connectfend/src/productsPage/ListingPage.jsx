@@ -13,7 +13,9 @@ const getAllTags = (products) => {
             p.specs.protocol.split(',').forEach(pro => tags.add(pro.trim()));
         }
     });
-    return Array.from(tags).sort();
+
+    // Limit to top 10 tags to reduce clutter
+    return Array.from(tags).sort().slice(0, 10);
 };
 
 export default function ListingPage() {

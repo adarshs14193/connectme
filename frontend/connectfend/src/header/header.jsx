@@ -38,7 +38,7 @@ export default function Header() {
 
       {/* LOGO */}
       <div className="logo">
-        <a href="/"><img src={Logo} alt="Company Logo" /></a>
+        <a href="/" className="logo-text">ConnectME</a>
       </div>
 
       {/* HAMBURGER ICON */}

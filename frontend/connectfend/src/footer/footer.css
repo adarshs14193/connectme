@@ -131,12 +131,23 @@
 
 }
 
+.footer-location-block {
+  margin-bottom: 15px;
+}
+
+.footer-location-block strong {
+  color: #26AAE3;
+  font-size: 16px;
+  display: block;
+  margin-bottom: 4px;
+}
+
 .footer-location {
   max-width: 280px;
   font-size: var(--font-body);
-  line-height: 1.5;
-  margin-top: 10px;
-  color: #fff;
+  line-height: 1.4;
+  margin-top: 0;
+  color: #e0e0e0;
 }
 
 /* Wrapper keeps hr + text centered and same width */

@@ -57,13 +57,29 @@ export default function Footer() {
                     <a href="tel:+97142348480">+97142348480</a>
 
                     <h2 className="footer-heading" style={{ marginTop: "25px" }}>
-                        Location
+                        Locations
                     </h2>
 
-                    <p className="footer-location">
-                        Warehouse-7, Al Qaseer Warehouse, Ras Al Khor Industrial area-2,
-                        Dubai - UAE.
-                    </p>
+                    <div className="footer-location-block">
+                        <strong>Dubai (HQ)</strong>
+                        <p className="footer-location">
+                            Warehouse-7, Al Qaseer Warehouse, Ras Al Khor Ind. Area-2, Dubai.
+                        </p>
+                    </div>
+
+                    <div className="footer-location-block">
+                        <strong>Saudi Arabia</strong>
+                        <p className="footer-location">
+                            Office 14, 2nd Floor, Al Khobar Center, Al Khobar, KSA.
+                        </p>
+                    </div>
+
+                    <div className="footer-location-block">
+                        <strong>Qatar</strong>
+                        <p className="footer-location">
+                            Office 202, Almana Tower, C-Ring Road, Doha, Qatar.
+                        </p>
+                    </div>
                 </div>
 
             </div>

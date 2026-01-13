@@ -31,12 +31,28 @@ body {
 /* =============================
           LOGO
 ============================= */
-.logo img {
-  height: 55px;
-  width: auto;
-  object-fit: contain;
-  display: block;
-  margin-top: 12px;
+/* =============================
+          LOGO
+============================= */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  font-family: "Oxygen", sans-serif;
+  font-size: 32px;
+  /* Prominent size */
+  font-weight: 700;
+  color: #26AAE3;
+  /* Brand Blue */
+  text-decoration: none;
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+
+.logo-text:hover {
+  color: #000;
 }
 
 /* =============================
