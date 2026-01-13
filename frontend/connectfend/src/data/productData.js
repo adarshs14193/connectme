@@ -48,7 +48,7 @@ const productData = [
                     {
                         id: "uflo-u60",
                         name: "UFLO U60 Advances Series",
-                        description: "High-accuracy ultrasonic BTU meter for advanced HVAC metering, designed for precise energy management.",
+                        description: "Uflo ultrasonic BTU Meter- U60 Advanced series.",
                         image: ufloU60Img,
                         brochure: ufloU60Pdf,
                         features: [
@@ -58,16 +58,18 @@ const productData = [
                             "Long-life battery option"
                         ],
                         specs: {
-                            technology: "Ultrasonic",
-                            application: "HVAC Energy Metering",
-                            protocol: "M-Bus, Modbus"
+                            size: "DN15 to DN40",
+                            tempSensor: "PT1000 Jumo sensors",
+                            batteryLife: "> 12 years",
+                            replaceable: "Battery & Temp. Sensors",
+                            certification: "MID certified"
                         },
                         tags: ["HVAC", "Advanced", "BMS Ready"]
                     },
                     {
                         id: "uflo-u50",
                         name: "UFLO U50 Compact Series",
-                        description: "Compact ultrasonic BTU meter for residential and commercial sub-metering, designed for tight spaces.",
+                        description: "Uflo Ultrasonic Compact BTU Meter-U50 Compact Series.",
                         image: placeholder,
                         brochure: ufloU50Pdf,
                         features: [
@@ -77,16 +79,16 @@ const productData = [
                             "Easy installation"
                         ],
                         specs: {
-                            technology: "Ultrasonic",
-                            application: "Sub-metering",
-                            size: "Compact"
+                            size: "DN15 to DN40",
+                            protection: "IP65 / IP68",
+                            batteryLife: "10 Years"
                         },
                         tags: ["Residential", "Compact", "Retrofit"]
                     },
                     {
                         id: "uflo-u50-bulk",
                         name: "UFLO U50 Bulk BTU Meter",
-                        description: "Robust bulk BTU meter for main line billing, designed for high-flow commercial applications.",
+                        description: "Uflo Ultrasonic bulk BTU Meter-U50 Compact Series.",
                         image: placeholder,
                         features: [
                             "Wide flow range support",
@@ -94,9 +96,10 @@ const productData = [
                             "High precision billing grade"
                         ],
                         specs: {
-                            technology: "Ultrasonic",
-                            application: "Bulk Metering",
-                            size: "Large DN"
+                            size: "DN50 to DN300",
+                            protection: "IP65 / IP68",
+                            batteryLife: "10 Years",
+                            communication: "Mbus / RS485"
                         },
                         tags: ["Commercial", "Billing", "Main Line"]
                     }
@@ -109,19 +112,30 @@ const productData = [
                     {
                         id: "uflo-u40",
                         name: "UFLO U40 Compact Series",
-                        description: "Smart ultrasonic water meter for accurate consumption tracking, designed for residential use.",
+                        description: "Uflo U40 Compact Series.",
                         image: placeholder,
                         brochure: ufloU40CompactPdf,
                         features: ["No moving parts", "Leak detection capability", "Long battery life"],
+                        specs: {
+                            size: "DN15 to DN40",
+                            accuracy: "Class 2",
+                            waterTemp: "T30 / T50",
+                            rFactor: "R250 / R400"
+                        },
                         tags: ["Water", "Residential", "Smart"]
                     },
                     {
                         id: "uflo-u40-bulk",
                         name: "UFLO U40 Bulk Flow Meter",
-                        description: "Industrial-grade bulk water meter for distribution networks, designed for reliable long-term metering.",
+                        description: "Uflo U40 Bulk Flow Meter.",
                         image: placeholder,
                         brochure: ufloU40BulkPdf,
                         features: ["Wide dynamic range", "Durable industrial design", "Remote reading ready"],
+                        specs: {
+                            size: "DN50 to DN500",
+                            accuracy: "Class 2",
+                            waterTemp: "T30 / T50"
+                        },
                         tags: ["Water", "Industrial", "Distribution"]
                     },
                     {
@@ -141,19 +155,32 @@ const productData = [
                     {
                         id: "gima-b",
                         name: "GIMA-B Type Electromagnetic Flow Meter",
-                        description: "High-performance mag meter for conductive liquids, designed for wastewater and industrial processes.",
+                        description: "GI Instruments GIMA-B type Electromagnetic Flow meters.",
                         image: placeholder,
                         brochure: gimaBPdf,
                         features: ["No pressure loss", "High accuracy for conductive fluids", "Chemical resistant liner"],
+                        specs: {
+                            accuracy: "+/- 0.5%",
+                            size: "DN6 to DN2000",
+                            liner: "Rubber / PTFE / PFE",
+                            communication: "Modbus RS485 / HART"
+                        },
                         tags: ["Industrial", "Wastewater", "Conductive"]
                     },
                     {
                         id: "gima-h",
                         name: "GIMA-H Type Electromagnetic Flow Meter",
-                        description: "Hygiene-focused electromagnetic meter, designed for food, beverage, and sanitary applications.",
+                        description: "GI instruments GIMA-H electromagnetic HEAT/BTU meters.",
                         image: placeholder,
                         brochure: gimaHPdf,
                         features: ["Sanitary connections", "Food-grade materials", "CIP compatible"],
+                        specs: {
+                            accuracy: "2%",
+                            size: "DN15 to DN600",
+                            liner: "Rubber / PTFE / PFE",
+                            communication: "Modbus RS485 / HART",
+                            rating: "IP65 / IP68"
+                        },
                         tags: ["Sanitary", "Food & Bev", "Hygiene"]
                     },
                     {
@@ -163,6 +190,12 @@ const productData = [
                         image: placeholder,
                         brochure: gimaIbPdf,
                         features: ["Hot tap installation", "Cost-effective for large pipes", "Low maintenance"],
+                        specs: {
+                            accuracy: "2%",
+                            size: "DN100 to DN3000",
+                            communication: "Modbus RS485 / HART",
+                            rating: "IP65 / IP68"
+                        },
                         tags: ["Retrofit", "Large Pipe", "Insertion"]
                     }
                 ]
@@ -174,20 +207,31 @@ const productData = [
                     {
                         id: "tkn202",
                         name: "Techknave TKN202 Clamp-on BTU/FLOW Meter",
-                        description: "Non-invasive clamp-on meter for flow and energy measurement, designed for quick retrofit without cutting pipes.",
+                        description: "Techknave Standard Clampon Ultrasonic BTU /Flow meter - (TKN202B /F).",
                         image: placeholder,
                         brochure: tkn202Pdf,
                         features: ["Non-invasive installation", "Ideal for existing buildings", "Flow and Energy modes"],
-                        specs: { type: "Clamp-on", medium: "Liquid" },
+                        specs: {
+                            size: "DN50 to DN2000",
+                            accuracy: "+/- 1%",
+                            tempSensor: "PT100",
+                            communication: "RS485 / Mbus / BacNet IP / 4G"
+                        },
                         tags: ["Retrofit", "Non-invasive", "Quick Install"]
                     },
                     {
                         id: "tkn204",
                         name: "Techknave TKN204 Enhanced Clamp-on BTU/Flow Meter",
-                        description: "Enhanced precision clamp-on meter with advanced signal processing, designed for challenging flow conditions.",
+                        description: "Techknave Enhanced Clampon Ultrasonic BTU /Flow meter (TKN204B /F).",
                         image: placeholder,
                         brochure: tkn204Pdf,
                         features: ["Enhanced accuracy", "Difficult pipe material support", "Advanced diagnostics"],
+                        specs: {
+                            size: "DN50 to DN3000",
+                            accuracy: "+/- 0.5%",
+                            tempSensor: "PT1000",
+                            communication: "RS485 / Mbus"
+                        },
                         tags: ["Precision", "Advanced", "Clamp-on"]
                     },
                     {
@@ -202,9 +246,14 @@ const productData = [
                     {
                         id: "tkn203",
                         name: "Techknave TKN203 Portable Flow Meter",
-                        description: "Battery-powered portable flow meter, designed for energy audits and temporary spot checks.",
+                        description: "Techknave Handheld Clampon Ultrasonic BTU /Flow meter.",
                         image: placeholder,
                         features: ["Carry case included", "Battery powered", "Data logging"],
+                        specs: {
+                            size: "DN50 to DN3000",
+                            accuracy: "+/- 0.5%",
+                            tempSensor: "PT1000"
+                        },
                         tags: ["Portable", "Audit", "Tool"]
                     }
                 ]
@@ -232,6 +281,48 @@ const productData = [
                         tags: ["Gas", "Smart", "Safety"]
                     }
                 ]
+            },
+            {
+                name: "Mechanical Meters",
+                slug: "mechanical-meters",
+                products: [
+                    {
+                        id: "multi-jet",
+                        name: "Multi-Jet Meter",
+                        description: "Multi-jet Meter (DN15, DN20 & DN25) is an Economical option for residential metering.",
+                        image: placeholder,
+                        specs: {
+                            body: "Brass",
+                            flow: "1.5 to 6 m3/h",
+                            protection: "Magnetic"
+                        },
+                        tags: ["Economical", "Residential", "Mechanical"]
+                    },
+                    {
+                        id: "single-jet",
+                        name: "Single Jet Meter",
+                        description: "Single Jet Meter (DN15 to DN40) is an Economical option for residential metering.",
+                        image: placeholder,
+                        specs: {
+                            body: "Brass / Nylon (Dry Dial)",
+                            flow: "1.5 to 10 m3/h",
+                            protection: "Magnetic"
+                        },
+                        tags: ["Economical", "Residential", "Mechanical"]
+                    },
+                    {
+                        id: "woltmann",
+                        name: "Woltmann Meter",
+                        description: "Woltmann Meter (DN50 to DN300) is an Economical option for industrial metering.",
+                        image: placeholder,
+                        specs: {
+                            body: "Cast Iron",
+                            flow: "15 to 600 m3/h",
+                            protection: "Magnetic"
+                        },
+                        tags: ["Industrial", "Mechanical", "High Flow"]
+                    }
+                ]
             }
         ]
     },
@@ -250,8 +341,14 @@ const productData = [
                     {
                         id: "smart-mbus-valve-controller",
                         name: "Smart M-Bus Valve Controller",
-                        description: "Controller module that connects standard valves to wired M-Bus networks, built for reliable BMS integration.",
+                        description: "Smart M-Bus Valve Controller-Segregated.",
                         image: placeholder,
+                        specs: {
+                            method: "Motorized ball valve",
+                            pipeSection: "DN15 to DN32",
+                            terminals: "2 clip type (M-Bus & Valve)",
+                            material: "Brass / SS304"
+                        },
                         tags: ["M-Bus", "Controller", "BMS"]
                     },
                     {
@@ -308,6 +405,11 @@ const productData = [
                         description: "All-in-one motorized valve with M-Bus interface, designed for direct BMS water control.",
                         image: placeholder,
                         brochure: tknValvePdf,
+                        specs: {
+                            method: "Motorized ball valve",
+                            pipeSection: "DN15 to DN25",
+                            features: "Manual Override"
+                        },
                         tags: ["Integrated", "Valve", "M-Bus"]
                     },
                     {
