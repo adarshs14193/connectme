@@ -11,16 +11,16 @@
 
 /* MAIN GRID */
 .footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 80px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  /* Left gets more space */
+  gap: 60px;
+  align-items: start;
 }
 
 /* LEFT SECTION */
 .footer-left {
-  max-width: 360px;
+  /* max-width removed to fit grid */
 }
 
 .footer-logo img {
@@ -61,8 +61,8 @@
 
 .footer-desc {
   margin-top: 12px;
-  font-size: 23px;
-  line-height: 1.25;
+  font-size: var(--font-body);
+  line-height: 1.5;
   color: #fff;
 }
 
@@ -81,6 +81,7 @@
   display: inline-block;
   margin-bottom: 25px;
   font-size: 16px;
+  /* Small utility link can be smaller */
   text-decoration: underline;
   color: #fff;
 }
@@ -88,7 +89,10 @@
 /* MIDDLE */
 .footer-middle h2,
 .footer-right h2 {
-  font-size: 30px;
+  font-size: var(--font-medium);
+  /* 36px might be too big for footer headings, lets adjust to 30px manually or use small */
+  font-size: 24px;
+  /* Footer headings usually smaller than section titles */
   font-weight: 700;
   margin-bottom: 12px;
 }
@@ -105,7 +109,7 @@
 .footer-middle a {
   color: #fff;
   text-decoration: underline;
-  font-size: 19px;
+  font-size: var(--font-body);
 }
 
 .footer-middle a:hover {
@@ -119,7 +123,7 @@
   margin-bottom: 12px;
   color: #fff;
   text-decoration: underline;
-  font-size: 19px;
+  font-size: var(--font-body);
 }
 
 .footer-right a:hover {
@@ -129,8 +133,8 @@
 
 .footer-location {
   max-width: 280px;
-  font-size: 17px;
-  line-height: 1.25;
+  font-size: var(--font-body);
+  line-height: 1.5;
   margin-top: 10px;
   color: #fff;
 }
@@ -155,7 +159,8 @@
 /* Copyright text */
 .footer-bottom {
   color: #fff;
-  font-size: 23px;
+  font-size: 14px;
+  /* Copyright is usually small */
   font-weight: 400;
   text-align: center;
   margin: 0;
@@ -172,9 +177,9 @@
   }
 
   .footer-container {
+    display: flex;
     flex-direction: column;
     gap: 40px;
-    align-items: flex-start;
   }
 
   .footer-input {

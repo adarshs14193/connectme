@@ -65,18 +65,33 @@ export default function Header() {
             )}
           </li>
 
-          {/* SERVICES DROPDOWN */}
+          {/* SOLUTIONS DROPDOWN */}
           <li>
             <span
               className="nav-link"
-              onClick={(e) => toggleDropdown("services", e)}
+              onClick={(e) => toggleDropdown("solutions", e)}
             >
-              Services
+              Solutions
             </span>
 
-            {/* SERVICES DROPDOWN PANEL */}
-            {openDropdown === "services" && (
-              <ServicesDropdown onClose={handleMenuClick} />
+            {/* SOLUTIONS PANEL */}
+            {openDropdown === "solutions" && (
+              <ServicesDropdown onClose={handleMenuClick} specificCategory="Solutions" />
+            )}
+          </li>
+
+          {/* SOFTWARES DROPDOWN (Maps to 'Services' Data Category) */}
+          <li>
+            <span
+              className="nav-link"
+              onClick={(e) => toggleDropdown("softwares", e)}
+            >
+              Softwares
+            </span>
+
+            {/* SOFTWARES PANEL */}
+            {openDropdown === "softwares" && (
+              <ServicesDropdown onClose={handleMenuClick} specificCategory="Services" />
             )}
           </li>
 

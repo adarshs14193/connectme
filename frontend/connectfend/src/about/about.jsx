@@ -13,8 +13,8 @@ export default function AboutPage() {
                 <img src={heroImg} alt="About ConnectME" className="about-hero-img" />
 
                 <div className="about-hero-overlay">
-                    <h1>ConnectME</h1>
-                    <p>Connecting Business Needs With IoT Technology</p>
+                    <h1>Smart Metering. Secure IoT. Made for Scale.</h1>
+                    <p>End-to-end metering, billing, and Industrial IoT ecosystems—engineered, manufactured, and deployed with reliability and cybersecurity at the core.</p>
                 </div>
             </div>
             <div className="about-section">
@@ -34,37 +34,26 @@ export default function AboutPage() {
                     {/* RIGHT TEXT */}
                     <div className="about-text">
                         <p>
-                            ConnectME solutions is leading Industrial IoT technology solution company since 2016 in UAE
-                            with delivery record of 100+ IoT solutions. We are turnkey software development company with
-                            specialization in Utility metering and Billing solutions (UBILL), Energy management software’s,
-                            IoT platforms, Cloud connectivity tools and customized software solutions.
-                            Our UBILL billing solutions running over 180+ building with 50000+ connected meters
-                            with 80+ happy customers/clients.
+                            ConnectME Manufacturing LLC is a UAE-based Industrial IoT technology and manufacturing company, delivering cyber-secure, scalable, and sustainable IoT solutions since 2016. We design and manufacture end-to-end smart metering and utility management solutions, including Utility Metering & Billing (UBILL), Energy Management (UENERGY), IoT platforms, cloud connectivity, and customized software solutions.
                         </p>
 
                         <p>
-                            We are manufacturer and distributor of TECHKNAVE meters, MBUS devices and
-                            UCONNECT customized gateways.
+                            Our solutions are trusted across 800+ buildings, connecting 500,000+ meters for 120+ customers across the GCC.
                         </p>
 
                         <p>
-                            We build highly secure IoT solutions to Automate and Monitor all your business
-                            processes remotely and securely.
+                            With a strong focus on high-quality manufacturing, we produce advanced IoT hardware such as TECHKNAVE smart valves, clamp-on meters, UFLO ultrasonic BTU & water meters, GasKonnect AMR & relay controllers, UCONNECT M-Bus devices, edge gateways, protocol converters, and water leak detectors—engineered for reliability, accuracy, and cybersecurity.
                         </p>
                     </div>
                 </div>
 
                 {/* SECOND PARAGRAPH BLOCK */}
                 <p className="about-full-text">
-                    We are expertise in LPWAN technologies primarily of LoRaWAN and had setup
-                    50+ private LoRa network across various residential / commercial building &
-                    Malls in GCC.
+                    ConnectME enables organizations to automate, monitor, and optimize operations remotely through secure, end-to-end IoT ecosystems. We bring deep expertise in LPWAN technologies, particularly LoRaWAN, and have deployed 150+ private LoRa networks across residential, commercial, and retail environments throughout the GCC.
                 </p>
 
                 <p className="about-full-text">
-                    Our expertise extends to Remote connectivity solutions for connecting
-                    remote equipment/ plants/ building to central command center over secure
-                    and reliable VPN over internet. We have connected over 1000+ VPN devices.
+                    Our operations follow international quality, environmental, and occupational safety standards, ensuring consistent performance, regulatory compliance, and long-term sustainability. Through customer-centric innovation, secure system design, and continuous improvement, ConnectME is committed to shaping smarter cities, resilient utilities, and responsible digital infrastructure across the region and beyond.
                 </p>
 
             </div>
@@ -73,31 +62,26 @@ export default function AboutPage() {
 
                 <div className="about-card">
                     <h2 className="about-card-title">Quality Standards</h2>
-
-                    <ul>
-                        <li>Methodical approach to ensuring consistently high quality in our products and services.</li>
-                        <li>Systematic control of workplace risks, preventing accidents, and enhancing employee wellness.</li>
-                        <li>Commitment to managing environmental risks and promoting sustainable practices.</li>
-                    </ul>
+                    <p>
+                        At ConnectME Manufacturing LLC, quality is embedded across our design, manufacturing, and delivery processes. We adhere to international quality, environmental, occupational health & safety, and cybersecurity best practices, and our operations are certified to ISO 9001 / 14001 / 45001 standards.
+                    </p>
                 </div>
 
                 <div className="about-card">
                     <h2 className="about-card-title">Our Mission</h2>
-
-                    <ul>
-                        <li>To drive operational excellence through real-time analytics and automation.</li>
-                        <li>To deliver scalable IoT solutions that optimize resource usage and reduce costs.</li>
-                        <li>To enhance customer satisfaction through innovative and reliable technology.</li>
-                    </ul>
+                    <p>
+                        To design, manufacture, and deliver cyber-secure, innovative metering and billing solutions and sustainable Industrial IoT solutions across the GCC and beyond.
+                    </p>
+                    <p className="about-card-small">
+                        We leverage IoT, AI, and data analytics to deliver end-to-end smart metering ecosystems, including meters, smart valves, gateways, network connectivity, AMR and Billing platforms.
+                    </p>
                 </div>
 
                 <div className="about-card">
                     <h2 className="about-card-title">Our Vision</h2>
-
-                    <ul>
-                        <li>To be the premier partner for Industrial Automation and Smart City solutions in the region.</li>
-                        <li>To pioneer SaaS-based IoT platforms that empower businesses with actionable insights.</li>
-                    </ul>
+                    <p>
+                        To become a globally recognized Industrial IoT technology and manufacturing brand, leading the GCC market in Utility billing solutions, Smart valves and Meter manufacturing, and secure connected infrastructure.
+                    </p>
                 </div>
 
             </div>

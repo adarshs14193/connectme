@@ -42,17 +42,28 @@ body {
 /* =============================
         NAVIGATION
 ============================= */
+.nav {
+  margin-left: auto;
+  /* Pushes nav to the right */
+  margin-right: 30px;
+  /* Space before contact button */
+}
+
 .nav ul {
   display: flex;
   list-style: none;
-  gap: 100px;
+  gap: 40px;
+  /* Reduced gap for better fit */
   margin: 0;
   padding: 0;
 }
 
 .nav a,
 .nav-link {
-  font-size: 25px;
+  font-size: var(--font-body);
+  /* Standardized manageable size */
+  font-weight: 600;
+  /* Consistent weight */
   text-decoration: none;
   color: #26AAE3;
   transition: 0.2s ease;

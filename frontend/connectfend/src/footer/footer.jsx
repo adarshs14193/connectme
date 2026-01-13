@@ -23,9 +23,8 @@ export default function Footer() {
                     </div>
 
                     <p className="footer-desc">
-                        ConnectME Manufacturing LLC is a battle-hardened team of IoT in GCC.
-                        Partner with us today to see how IoT can revolutionize the way to
-                        automate your Business process.
+                        ConnectME Manufacturing LLC is a UAE-based Industrial IoT technology and manufacturing company,
+                        delivering cyber-secure and scalable smart metering and IoT solutions since 2016.
                     </p>
 
                     <div className="footer-icons">
