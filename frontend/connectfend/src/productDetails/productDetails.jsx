@@ -8,7 +8,7 @@ export default function ProductDetails() {
   const [product, setProduct] = useState(null);
   const [relatedProducts, setRelatedProducts] = useState([]);
   const [breadcrumbs, setBreadcrumbs] = useState([]);
-  const [activeTab, setActiveTab] = useState('overview');
+  const [activeTab, setActiveTab] = useState('features');
 
   useEffect(() => {
     // 1. Find Product & Context
@@ -71,6 +71,13 @@ export default function ProductDetails() {
           <h1 className="pd-title">{product.name}</h1>
           <p className="pd-tagline">{product.description}</p>
 
+          {/* LONG DESCRIPTION (Intro) */}
+          <div className="pd-hero-desc">
+            {product.longDescription ? (
+              product.longDescription.split('\n').map((para, i) => <p key={i}>{para}</p>)
+            ) : null}
+          </div>
+
           <div className="pd-actions">
             <Link to="/contact" className="btn-primary">Request a Quote</Link>
             {product.brochure ? (
@@ -92,12 +99,6 @@ export default function ProductDetails() {
 
         {/* TABS NAVIGATION */}
         <div className="pd-tabs">
-          <button
-            className={`pd-tab-btn ${activeTab === 'overview' ? 'active' : ''}`}
-            onClick={() => setActiveTab('overview')}
-          >
-            Overview
-          </button>
           <button
             className={`pd-tab-btn ${activeTab === 'features' ? 'active' : ''}`}
             onClick={() => setActiveTab('features')}
@@ -124,20 +125,6 @@ export default function ProductDetails() {
 
         {/* TAB CONTENT */}
         <div className="pd-tab-content">
-
-          {/* OVERVIEW TAB */}
-          {activeTab === 'overview' && (
-            <section className="pd-tab-panel">
-              <h2 className="section-title">Overview</h2>
-              <div className="pd-overview-text">
-                {product.longDescription ? (
-                  product.longDescription.split('\n').map((para, i) => <p key={i}>{para}</p>)
-                ) : (
-                  <p>{product.description}</p>
-                )}
-              </div>
-            </section>
-          )}
 
           {/* FEATURES TAB */}
           {activeTab === 'features' && (
