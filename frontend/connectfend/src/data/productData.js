@@ -48,6 +48,7 @@ const productData = [
                     {
                         id: "uflo-u60",
                         name: "UFLO U60 Advances Series",
+                        longDescription: "The UFLO U60 Advanced Series is our flagship ultrasonic BTU meter, engineered for high-precision energy management in HVAC systems. Unlike traditional mechanical meters, the U60 uses ultrasonic technology to ensure consistent accuracy over its entire lifespan with no moving parts to wear out. \nIdeally suited for district cooling and commercial building automation, it comes fully MID certified and supports seamless integration via M-Bus or Modbus protocols.",
                         description: "Uflo ultrasonic BTU Meter- U60 Advanced series.",
                         image: ufloU60Img,
                         brochure: ufloU60Pdf,
@@ -69,6 +70,7 @@ const productData = [
                     {
                         id: "uflo-u50",
                         name: "UFLO U50 Compact Series",
+                        longDescription: "Designed for tight spaces and residential applications, the UFLO U50 Compact Series delivers reliable ultrasonic metering in a small footprint. It is the perfect solution for apartment sub-metering, offering IP68 protection and a 10-year battery life to ensure maintenance-free operation.",
                         description: "Uflo Ultrasonic Compact BTU Meter-U50 Compact Series.",
                         image: placeholder,
                         brochure: ufloU50Pdf,
@@ -112,6 +114,7 @@ const productData = [
                     {
                         id: "uflo-u40",
                         name: "UFLO U40 Compact Series",
+                        longDescription: "The UFLO U40 is a smart ultrasonic water meter designed for accurate residential consumption tracking. With zero moving parts, it is immune to sediment and wear, guaranteeing class 2 accuracy for years. It features built-in leak detection and R400 dynamic range for precise low-flow measurement.",
                         description: "Uflo U40 Compact Series.",
                         image: placeholder,
                         brochure: ufloU40CompactPdf,
@@ -155,6 +158,7 @@ const productData = [
                     {
                         id: "gima-b",
                         name: "GIMA-B Type Electromagnetic Flow Meter",
+                        longDescription: "The GIMA-B is a robust electromagnetic flow meter designed for conductive liquids in industrial and wastewater applications. Featuring a chemical-resistant liner and no moving parts, it handles slurries and aggressive fluids with ease, providing +/- 0.5% accuracy and zero pressure loss.",
                         description: "GI Instruments GIMA-B type Electromagnetic Flow meters.",
                         image: placeholder,
                         brochure: gimaBPdf,
@@ -170,6 +174,8 @@ const productData = [
                     {
                         id: "gima-h",
                         name: "GIMA-H Type Electromagnetic Flow Meter",
+                        longDescription: "Engineered for hygiene-critical environments, the GIMA-H offers sanitary connections and food-grade materials suitable for the F&B and pharmaceutical industries. It is fully CIP/SIP compatible and maintains high accuracy even during rapid temperature changes.",
+                        description: "GIMA-H Type Electromagnetic Flow Meter",
                         description: "GI instruments GIMA-H electromagnetic HEAT/BTU meters.",
                         image: placeholder,
                         brochure: gimaHPdf,
@@ -207,6 +213,7 @@ const productData = [
                     {
                         id: "tkn202",
                         name: "Techknave TKN202 Clamp-on BTU/FLOW Meter",
+                        longDescription: "The Techknave TKN202 offers a completely non-invasive metering solution, perfect for retrofitting existing buildings without cutting pipes. Its clamp-on transducers can be installed in minutes, providing accurate flow and energy measurement for energy audits and temporary monitoring.",
                         description: "Techknave Standard Clampon Ultrasonic BTU /Flow meter - (TKN202B /F).",
                         image: placeholder,
                         brochure: tkn202Pdf,
