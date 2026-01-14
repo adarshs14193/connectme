@@ -27,6 +27,8 @@
   height: 65px;
   width: auto;
   margin-bottom: 15px;
+  filter: brightness(0) invert(1);
+  /* Make logo white */
 }
 
 .footer-title {

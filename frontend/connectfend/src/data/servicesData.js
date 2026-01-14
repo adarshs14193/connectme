@@ -16,21 +16,21 @@ const servicesData = [
     text:
       "Our Remote Connectivity & VPN solutions provide secure and reliable remote access to your utility infrastructure. We offer tailored VPN solutions that ensure data integrity and protection against cyber threats, enabling seamless remote management of your systems.",
     image: remote,
-    link:"/services1#remote-connect"
+    link: "/services1#remote-connect"
   },
   {
     id: 3,
     text:
-      "Connectfend offers comprehensive IoT & LoRaWAN solutions that enable efficient data collection and monitoring for utility management. Our services include sensor integration, network deployment, and data analytics to optimize operations and enhance decision-making.",
+      "ConnectME offers comprehensive IoT & LoRaWAN solutions that enable efficient data collection and monitoring for utility management. Our services include sensor integration, network deployment, and data analytics to optimize operations and enhance decision-making.",
     image: iot,
-    link:"/services1#lorawan"
+    link: "/services1#lorawan"
   },
   {
     id: 4,
     text:
       "Leverage our expertise in LoRaWAN Sensors to enhance your utility management systems. We provide a range of sensors for monitoring water, gas, and electricity usage, enabling real-time data acquisition and improved resource management.",
     image: iotlowa,
-    link:"/services1#lorawan-sensors"
+    link: "/services1#lorawan-sensors"
   }
 ];
 

@@ -1,7 +1,7 @@
 import "./footer.css";
 import React from "react";
-import { FaLinkedin, FaFacebook } from "react-icons/fa";
-import Logo from "../assets/logo.png"; // your logo
+import { FaLinkedin, FaFacebook, FaMapMarkerAlt } from "react-icons/fa";
+import Logo from "../assets/connectME_logo_transparent.png"; // Updated logo
 
 export default function Footer() {
     return (
@@ -56,16 +56,21 @@ export default function Footer() {
                     <a href="tel:+97142349525">+97142349525</a>
                     <a href="tel:+97142348480">+97142348480</a>
 
+                    {/* LOCATION: HQ */}
                     <h2 className="footer-heading" style={{ marginTop: "25px" }}>
-                        Locations
+                        UAE HQ <FaMapMarkerAlt size={16} color="#fff" style={{ marginLeft: "8px" }} />
                     </h2>
-
                     <div className="footer-location-block">
-                        <strong>Dubai (HQ)</strong>
+                        <strong>Dubai</strong>
                         <p className="footer-location">
                             Warehouse-7, Al Qaseer Warehouse, Ras Al Khor Ind. Area-2, Dubai.
                         </p>
                     </div>
+
+                    {/* LOCATION: REGIONAL */}
+                    <h2 className="footer-heading" style={{ marginTop: "25px" }}>
+                        Regional Offices <FaMapMarkerAlt size={16} color="#fff" style={{ marginLeft: "8px" }} />
+                    </h2>
 
                     <div className="footer-location-block">
                         <strong>Saudi Arabia</strong>
@@ -78,6 +83,13 @@ export default function Footer() {
                         <strong>Qatar</strong>
                         <p className="footer-location">
                             Office 202, Almana Tower, C-Ring Road, Doha, Qatar.
+                        </p>
+                    </div>
+
+                    <div className="footer-location-block">
+                        <strong>India</strong>
+                        <p className="footer-location">
+                            Bangalore, India.
                         </p>
                     </div>
                 </div>
