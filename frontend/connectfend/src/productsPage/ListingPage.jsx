@@ -117,6 +117,25 @@ export default function ListingPage() {
 
                 {/* SIDEBAR FILTERS */}
                 <aside className="listing-sidebar">
+                    {/* CATEOGRIES (Visible on root or always) */}
+                    <div className="filter-group">
+                        <h3 className="filter-title">Categories</h3>
+                        <div className="category-list">
+                            <Link to="/products" className={`category-link ${!category ? 'active' : ''}`}>
+                                All Products
+                            </Link>
+                            {productData.map(c => (
+                                <Link
+                                    to={`/products/${c.slug}`}
+                                    key={c.slug}
+                                    className={`category-link ${category === c.slug ? 'active' : ''}`}
+                                >
+                                    {c.category}
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+
                     <div className="filter-group">
                         <h3 className="filter-title">Filters</h3>
                         <div className="filter-list">

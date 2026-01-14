@@ -173,19 +173,23 @@
 
 /* FEATURES LIST */
 .pd-features-list {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 15px;
+  list-style: disc;
+  /* Bullet points */
+  padding-left: 20px;
+  /* Indent */
+  display: block;
+  /* Stack vertically */
+  margin-top: 10px;
 }
 
 .pd-features-list li {
-  background: #f9f9f9;
-  padding: 15px 20px;
-  border-radius: 6px;
-  border-left: 4px solid #26AAE3;
+  background: transparent;
+  padding: 8px 0;
+  border-radius: 0;
+  border-left: none;
   font-size: 16px;
+  line-height: 1.6;
+  color: #444;
 }
 
 /* SPECS TABLE */
