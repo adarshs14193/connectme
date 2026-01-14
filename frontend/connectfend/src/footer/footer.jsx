@@ -35,8 +35,8 @@ export default function Footer() {
                     <a href="#" className="footer-privacy">Privacy Policy</a>
                 </div>
 
-                {/* MIDDLE SECTION */}
-                <div className="footer-middle">
+                {/* COLUMN 2: NAVIGATE */}
+                <div className="footer-col footer-links">
                     <h2 className="footer-heading">Navigate</h2>
                     <ul>
                         <li><a href="/products">Products</a></li>
@@ -47,18 +47,18 @@ export default function Footer() {
                     </ul>
                 </div>
 
-                {/* RIGHT SECTION */}
-                <div className="footer-right">
+                {/* COLUMN 3: CONTACT & HQ */}
+                <div className="footer-col footer-contact">
                     <h2 className="footer-heading">Get In Touch</h2>
+                    <div className="contact-links">
+                        <a href="mailto:info@connectme.biz">info@connectme.biz</a>
+                        <a href="mailto:sales@connectme.biz">sales@connectme.biz</a>
+                        <a href="tel:+97142349525">+97142349525</a>
+                        <a href="tel:+97142348480">+97142348480</a>
+                    </div>
 
-                    <a href="mailto:info@connectme.biz">info@connectme.biz</a>
-                    <a href="mailto:sales@connectme.biz">sales@connectme.biz</a>
-                    <a href="tel:+97142349525">+97142349525</a>
-                    <a href="tel:+97142348480">+97142348480</a>
-
-                    {/* LOCATION: HQ */}
-                    <h2 className="footer-heading" style={{ marginTop: "25px" }}>
-                        UAE HQ <FaMapMarkerAlt size={16} color="#fff" style={{ marginLeft: "8px" }} />
+                    <h2 className="footer-heading" style={{ marginTop: "30px" }}>
+                        UAE HQ <FaMapMarkerAlt size={14} color="#fff" style={{ marginLeft: "6px" }} />
                     </h2>
                     <div className="footer-location-block">
                         <strong>Dubai</strong>
@@ -66,10 +66,12 @@ export default function Footer() {
                             Warehouse-7, Al Qaseer Warehouse, Ras Al Khor Ind. Area-2, Dubai.
                         </p>
                     </div>
+                </div>
 
-                    {/* LOCATION: REGIONAL */}
-                    <h2 className="footer-heading" style={{ marginTop: "25px" }}>
-                        Regional Offices <FaMapMarkerAlt size={16} color="#fff" style={{ marginLeft: "8px" }} />
+                {/* COLUMN 4: REGIONAL OFFICES */}
+                <div className="footer-col footer-regional">
+                    <h2 className="footer-heading">
+                        Regional Offices <FaMapMarkerAlt size={14} color="#fff" style={{ marginLeft: "6px" }} />
                     </h2>
 
                     <div className="footer-location-block">
