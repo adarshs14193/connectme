@@ -1,21 +1,27 @@
 import React from "react";
 import "./licensing.css";
-import cert1 from "../assets/logo.png"; // replace with your images
-import cert2 from "../assets/logo.png";
-import cert3 from "../assets/logo.png";
-import cert4 from "../assets/logo.png";
+import iso9001 from "../assets/iso_9001.png";
+import iso14001 from "../assets/iso_14001.png";
+import iso45001 from "../assets/iso_45001.png";
+import madeInUAE from "../assets/made_in_uae.png";
 
 export default function Licensing() {
-  const images = [cert1, cert2, cert3, cert4];
+  const certifications = [
+    { img: iso9001, label: "ISO 9001:2015" },
+    { img: iso14001, label: "ISO 14001:2015" },
+    { img: iso45001, label: "ISO 45001:2018" },
+    { img: madeInUAE, label: "Made in UAE" }
+  ];
 
   return (
     <div className="license-section">
       <h1 className="license-title">Licensing & Certifications</h1>
 
       <div className="license-grid">
-        {images.map((img, index) => (
+        {certifications.map((cert, index) => (
           <div key={index} className="license-card">
-            <img src={img} alt="license" />
+            <img src={cert.img} alt={cert.label} />
+            <p className="cert-label">{cert.label}</p>
           </div>
         ))}
       </div>
